@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Event name:</b>
+  <%= @event.name %>
+</p>
+
+<p>
+  <b>Event Agenda:</b>
+  <%= @event.agenda %>
+</p>
+
+<p>
+  <b>Event Description:</b>
+  <%= @event.description %>
+</p>
+
+<p>
+  <b>Attachment file:</b>
+
+  <%= link_to "#{@event.attachment_file}",download_file_event_path(@event) %>
+</p>
+
+
+<p>
+  <b>Sub category:</b>
+  <%= @event.sub_category_id %>
+</p>
+
+<p>
+  <b>Event Date:</b>
+  <%= @event.event_date %>
+</p>
+
+
+
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>

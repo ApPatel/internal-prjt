@@ -1,0 +1,40 @@
+
+<% @sub_category.each do |sub_category| %>
+<% sub_category_name=sub_category.name%>
+<h1>Listing events for the Sub Category :<%"#{sub_category_name}"</h1>
+
+<table>
+  <tr>
+    <th>Event Name</th>
+    <th>Agenda of the Event</th>
+    <th>Description</th>
+    <th>Attachment file</th>
+    <th>Event date</th>
+    
+    <th>Sub category to which event belongs</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  <% p "@sub_category"
+@events=@sub_category.events%>
+<% @events.each do |event| %>
+  <tr>
+    <td><%= event.name %></td>
+    <td><%= event.agenda %></td>
+    <td><%= event.description %></td>
+    <td><%= event.attachment_file %></td>
+    <td><%= event.sub_category_id %></td>
+      <td><%= event.event_date %></td>
+ 
+    <td><%= link_to 'Event page', event %></td>
+    <td><%= link_to 'Edit Event', edit_event_path(event) %></td>
+    <td><%= link_to 'Delete Event', event, method: :delete , data: { confirm: 'Are you sure to delete the event?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Create Event', new_event_path %>

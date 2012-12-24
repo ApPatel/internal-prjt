@@ -1,0 +1,44 @@
+<%= paginate @events %>
+<h1>Listing events</h1>
+
+<table class="tablestyling">
+  <tr>
+    <th>Event name</th>
+    <th>Event Agenda</th>
+    <th>Description</th>
+    <th>Attachment file</th>
+    <th>Event date</th>
+    
+    <th>Sub category to which event belongs</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+
+
+
+
+<% @events.each do |event| %>
+  <tr>
+    <td><%= event.name %></td>
+    <td><%= event.agenda %></td>
+    <td><%= event.description %></td>
+    
+
+      <td><%= event.event_date %></td>
+    <td><%= event.attachment_file %></td>
+    <%  @sub_category = SubCategory.find(event.sub_category_id)%>
+     <td><%= @sub_category.name %></td>
+   
+ 
+    <td><%= link_to 'Event page', event %></td>
+    <td><%= link_to 'Edit Event', edit_event_path(event) %></td>
+    <td><%= link_to 'Delete Event', event, method: :delete, data: { confirm: 'Are you sure to delete the event?' } %></td>
+  </tr>
+<% end %>
+
+</table>
+
+
