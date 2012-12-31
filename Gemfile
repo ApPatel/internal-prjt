@@ -8,6 +8,7 @@ gem 'rails', '3.2.9'
 gem 'mysql2'
 gem 'devise'
 gem 'execjs'
+gem 'libv8'
 gem 'therubyracer'
 
 gem 'kaminari'
