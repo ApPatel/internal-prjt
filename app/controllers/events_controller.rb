@@ -109,6 +109,7 @@ class EventsController < ApplicationController
 
   end
   def search
+    @events=Event.where('name like ?',params[:search]).page(params[:page])
     render :layout=>false
 
   end

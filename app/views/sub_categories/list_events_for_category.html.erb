@@ -23,7 +23,6 @@
     <th></th>
   </tr>
 
-<% @events=@sub_category.events%>
 
 
 <% @events.each do |event| %>
@@ -48,7 +47,7 @@
 
 <br />
 </div>
-<%= paginate @events %>
+<%= paginate @events%>
 <%= link_to 'Back', sub_categories_path %>
 
 
@@ -56,8 +55,7 @@
 function search(sub_category_id)
 {
   var search=$('#search').val()
-  
-  alert(sub_category_id)
+
     $.ajax({
     url: '/events/'+sub_category_id+'/search?search='+search+'&sub_category_id='+sub_category_id,
     error: function (XMLHttpRequest, textStatus, errorThrown) {
@@ -70,7 +68,4 @@ function search(sub_category_id)
     type: "get"
   });  
      }
-       
-
-
-</script>
+       </script>
