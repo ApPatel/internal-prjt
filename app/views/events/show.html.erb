@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<div class="wrapper">
 <p>
   <b>Event name:</b>
   <%= @event.name %>
@@ -24,14 +24,16 @@
 
 <p>
   <b>Sub category:</b>
-  <%= @event.sub_category_id %>
+  <% event=@event.sub_category_id %>
+   <%  @sub_category = SubCategory.find(event)%>
+     <td><%= @sub_category.name %></td>
 </p>
 
 <p>
   <b>Event Date:</b>
   <%= @event.event_date %>
 </p>
-
+</div>
 
 
 

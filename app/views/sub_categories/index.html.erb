@@ -2,7 +2,7 @@
 
   <h1>Listing Sub Categories</h1>
 
-<table>
+<table class="tablestyling">
   <tr>
     <th>Sub Category Name</th>
     <th></th>
@@ -19,10 +19,6 @@
   </tr>
 <% end %>
 </table>
-
-
-
+<%= paginate @sub_categories %>
 <br />
-
-<%= link_to 'Create Sub Category', new_sub_category_path %>
 </div>

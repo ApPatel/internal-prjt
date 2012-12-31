@@ -1,5 +1,6 @@
 <%= paginate @events %>
 <h1>Listing events</h1>
+  
 
 <table class="tablestyling">
   <tr>
@@ -15,11 +16,6 @@
     <th></th>
     <th></th>
   </tr>
-
-
-
-
-
 <% @events.each do |event| %>
   <tr>
     <td><%= event.name %></td>
@@ -27,10 +23,12 @@
     <td><%= event.description %></td>
     
 
+    
+   <td><%= link_to "#{event.attachment_file}",download_file_event_path(event)%></td>
       <td><%= event.event_date %></td>
-    <td><%= event.attachment_file %></td>
     <%  @sub_category = SubCategory.find(event.sub_category_id)%>
      <td><%= @sub_category.name %></td>
+
    
  
     <td><%= link_to 'Event page', event %></td>

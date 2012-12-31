@@ -1,9 +1,14 @@
 
-<% @sub_category.each do |sub_category| %>
-<% sub_category_name=sub_category.name%>
-<h1>Listing events for the Sub Category :<%"#{sub_category_name}"</h1>
+<% @sub_category_name=@sub_category.name%>
+ <div class="field">
+    <%= label_tag :'Search' %><br />
+    <%= text_field_tag :search %>
+  </div>
+   <input type="button" name="Go"  value="Go" onclick="search(<%=@sub_category.id%>)" /> 
+   <div id="listevents">
+<h1>Listing events for the Sub Category :<%="#{@sub_category_name}"%></h1>
 
-<table>
+<table class="tablestyling">
   <tr>
     <th>Event Name</th>
     <th>Agenda of the Event</th>
@@ -17,16 +22,22 @@
     <th></th>
     <th></th>
   </tr>
-  <% p "@sub_category"
-@events=@sub_category.events%>
+
+<% @events=@sub_category.events%>
+
+
 <% @events.each do |event| %>
   <tr>
     <td><%= event.name %></td>
     <td><%= event.agenda %></td>
     <td><%= event.description %></td>
-    <td><%= event.attachment_file %></td>
-    <td><%= event.sub_category_id %></td>
-      <td><%= event.event_date %></td>
+  <td><%= link_to "#{event.attachment_file}",download_file_event_path(event)%></td>
+    <td><%= event.event_date %></td>
+     <%  @sub_category = SubCategory.find(event.sub_category_id)%>
+     <td><%= @sub_category.name %></td>
+   
+   
+      
  
     <td><%= link_to 'Event page', event %></td>
     <td><%= link_to 'Edit Event', edit_event_path(event) %></td>
@@ -36,5 +47,30 @@
 </table>
 
 <br />
+</div>
+<%= paginate @events %>
+<%= link_to 'Back', sub_categories_path %>
 
-<%= link_to 'Create Event', new_event_path %>
+
+<script type="text/javascript">
+function search(sub_category_id)
+{
+  var search=$('#search').val()
+  
+  alert(sub_category_id)
+    $.ajax({
+    url: '/events/'+sub_category_id+'/search?search='+search+'&sub_category_id='+sub_category_id,
+    error: function (XMLHttpRequest, textStatus, errorThrown) {
+      alert("Something went wrong!! Please try again later.");
+                
+    },
+    success: function(data){    
+    jQuery("#listevents").html(data);
+    },
+    type: "get"
+  });  
+     }
+       
+
+
+</script>

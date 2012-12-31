@@ -1,0 +1,80 @@
+<%= paginate @sub_category%>
+<% @sub_category=SubCategory.find(params[:sub_category_id]) %>
+<% @sub_category_name=@sub_category.name %>
+<h1>Listing events for the Sub Category :<%="#{@sub_category_name}"%></h1>
+<% @events=@sub_category.events%>
+<% @events.each do |event| %>
+
+
+    <% if event.name==params[:search]%>
+   <table class="tablestyling">
+  <tr>
+    <th>Event Name</th>
+    <th>Agenda of the Event</th>
+    <th>Description</th>
+    <th>Attachment file</th>
+    <th>Event date</th>
+    
+    <th>Sub category to which event belongs</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+
+  <tr>
+    <td><%= event.name %></td>
+    <td><%= event.agenda %></td>
+    <td><%= event.description %></td>
+    <td><%= link_to "#{event.attachment_file}",download_file_event_path(event)%></td>
+    <td><%= event.event_date %></td>
+     <%  @sub_category = SubCategory.find(event.sub_category_id)%>
+     <td><%= @sub_category.name %></td>
+   
+   
+      
+ 
+    <td><%= link_to 'Event page', event %></td>
+    <td><%= link_to 'Edit Event', edit_event_path(event) %></td>
+    <td><%= link_to 'Delete Event', event, method: :delete , data: { confirm: 'Are you sure to delete the event?' } %></td>
+    <%elsif params[:search]==""%>
+    <table>
+  <tr>
+    <th>Event Name</th>
+    <th>Agenda of the Event</th>
+    <th>Description</th>
+    <th>Attachment file</th>
+    <th>Event date</th>
+    
+    <th>Sub category to which event belongs</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+
+  <tr>
+
+      <td><%= event.name %></td>
+    <td><%= event.agenda %></td>
+    <td><%= event.description %></td>
+  <td><%= link_to "#{event.attachment_file}",download_file_event_path(event)%></td>
+    <td><%= event.event_date %></td>
+     <%  @sub_category = SubCategory.find(event.sub_category_id)%>
+     <td><%= @sub_category.name %></td>
+   
+   
+      
+ 
+    <td><%= link_to 'Event page', event %></td>
+    <td><%= link_to 'Edit Event', edit_event_path(event) %></td>
+    <td><%= link_to 'Delete Event', event, method: :delete , data: { confirm: 'Are you sure to delete the event?' } %></td>
+    <%else %>
+   <% fountresult="NO RESULT FOUND"%>
+
+  <% end%>
+  </tr>
+<% end %>
+</table>

@@ -2,7 +2,7 @@ class SubCategoriesController < ApplicationController
   # GET /sub_categories
   # GET /sub_categories.json
   def index
-    @sub_categories = SubCategory.all
+    @sub_categories = SubCategory.order("id asc").page( params[:page]).per(5)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -83,5 +83,9 @@ class SubCategoriesController < ApplicationController
   end
     def list_events_for_category
          @sub_category = SubCategory.find(params[:id])
+         @sub_category=@sub_category.page(params[:page])
+         # @sub_category = SubCategory.order("id asc").page( params[:page]).per(5)
+
+ 
       end
 end

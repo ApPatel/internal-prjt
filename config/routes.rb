@@ -28,7 +28,8 @@ match "/events/other_sub_category" => "events#other_sub_category"
 
   resources :events do
        member do         
-         get 'download_file'        
+         get 'download_file'
+         get 'search'        
        end
        # collection do
        #  get "/events/other_sub_category", :to => "events#other_sub_category"
@@ -40,6 +41,7 @@ match "/events/other_sub_category" => "events#other_sub_category"
      resources :sub_categories do
       member do
         get 'list_events_for_category'
+
       end
     end
   #

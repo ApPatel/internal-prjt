@@ -6,7 +6,7 @@ class EventsController < ApplicationController
    # @events = Event.all
   # @users = User.order(:name).page params[:page]
   #@events = Event.order("name")
-    @events = Event.order("id asc").page( params[:page]).per(2)
+    @events = Event.order("id asc").page( params[:page]).per(5)
   #@events = Event.all
    
     respond_to do |format|
@@ -106,5 +106,10 @@ class EventsController < ApplicationController
       format.html { redirect_to events_url }
       format.json { head :no_content }
     end
+
+  end
+  def search
+    render :layout=>false
+
   end
 end

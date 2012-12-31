@@ -10,7 +10,7 @@
       </ul>
     </div>
   <% end %>
-
+<div class="wrapper">
   <div class="field">
     <%= f.label :'Event name' %><br />
     <%= f.text_field :name %>
@@ -40,13 +40,14 @@
 
  <%=  f.select :sub_category_id, options_for_select(@sub_categories.collect {|sub_category| [sub_category.name , sub_category.id]}), {:include_blank => 'Please Select'}%>
   </div>
-   <%= link_to "Create New Sub Category for this Event", other_sub_category_events_path %>
+   <%= link_to "Create New Sub Category for this Event", events_other_sub_category_path %>
    <div id="other"></div>
 
   
   <div class="actions">
     <%= f.submit %>
   </div>
+</div>
 <% end %>
 
 <script type="text/javascript">
