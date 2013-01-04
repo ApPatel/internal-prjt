@@ -40,7 +40,7 @@
 
  <%=  f.select :sub_category_id, options_for_select(@sub_categories.collect {|sub_category| [sub_category.name , sub_category.id]}), {:include_blank => 'Please Select'}%>
   </div>
-   <%= link_to "Create New Sub Category for this Event", events_other_sub_category_path %>
+   <%= link_to "Create New Sub Category for this Event", events_other_sub_category_path ,:id => 'subNewCat'%>
    <div id="other"></div>
 
   
@@ -54,7 +54,7 @@
 
   $(document).ready(function(){
 
-     $('a').click(function(){   
+     $('#subNewCat').click(function(){   
 
   
   if($('#event_sub_category_id').val()) 

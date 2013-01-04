@@ -3,7 +3,7 @@
 <% @sub_category_name=@sub_category.name %>
 <h1>Listing events for the Sub Category :<%="#{@sub_category_name}"%></h1>
 <table class="tablestyling">
-<% @events.each do |event| %>
+
    
   <tr>
     <th>Event Name</th>
@@ -19,7 +19,7 @@
     <th></th>
   </tr>
 
-
+<% @events.each do |event| %>
   <tr>
     <td><%= event.name %></td>
     <td><%= event.agenda %></td>
