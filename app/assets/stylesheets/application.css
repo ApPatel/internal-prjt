@@ -270,3 +270,19 @@ ul
 {
 	list-style: disc outside none;
 }
+.wrapper1
+{
+	background-color: #D3E2FF;
+    border-color: #75A3FF;
+    border-radius: 20px 20px 20px 20px;
+    border-style: groove;
+    border-width: 5px;
+    height: 145px;
+    margin-left: 950px;
+    margin-top: -350px;
+    width: 15%;
+     -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -khtml-border-radius: 20px;
+    border-radius: 20px;
+}
