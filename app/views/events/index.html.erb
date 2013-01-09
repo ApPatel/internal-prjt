@@ -1,16 +1,17 @@
 <%= paginate @events %>
+<div class="listheading"><div class="fontstyling">
 <h1>Listing events</h1>
-  
+  </div></div>
 
 <table class="tablestyling">
   <tr>
-    <th>Event name</th>
-    <th>Event Agenda</th>
+    <th>Event</th>
+    <th>Agenda</th>
     <th>Description</th>
-    <th>Attachment file</th>
+    <th>Attachment</th>
     <th>Event date</th>
     
-    <th>Sub category to which event belongs</th>
+    <th>Event Category</th>
     <th></th>
     <th></th>
     <th></th>
@@ -23,8 +24,11 @@
     <td><%= event.description %></td>
     
 
-
+   <%if event.attachment_file %>
    <td><%= link_to "#{event.attachment_file}",download_file_event_path(event)%></td>
+   <% else %>
+   <td> No Attachment </td>
+   <% end%>
       <td><%= event.event_date %></td>
     <%  @sub_category = SubCategory.find(event.sub_category_id)%>
      <td><%= @sub_category.name %></td>
