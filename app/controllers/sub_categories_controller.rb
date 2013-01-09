@@ -83,7 +83,7 @@ class SubCategoriesController < ApplicationController
   end
     def list_events_for_category
       @sub_category= SubCategory.find(params[:id])
-        @events = SubCategory.find(params[:id]).events.page(params[:page])
+        @events = SubCategory.find(params[:id]).events.page(params[:page]).per(5)
          #@sub_category=@sub_category.page(params[:page])
          # @sub_category = SubCategory.order("id asc").page( params[:page]).per(5)
 

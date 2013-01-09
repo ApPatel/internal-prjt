@@ -25,10 +25,11 @@ SecondApp::Application.routes.draw do
 #match '/events/other_sub_category' => "events#other_sub_category", :format => :js
   
 match "/events/other_sub_category" => "events#other_sub_category"
-
+#match "/events/delete_file" =>"events#delete_file"
   resources :events do
        member do         
          get 'download_file'
+         get 'delete_file'
          get 'search'        
        end
        # collection do

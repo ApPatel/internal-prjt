@@ -18,6 +18,7 @@
 <p>
   <b>Attachment file:</b>
 
+
   <%= link_to "#{@event.attachment_file}",download_file_event_path(@event) %>
 </p>
 
@@ -36,6 +37,8 @@
 </div>
 
 
-
+<% unless @event.event_date < Date.today %>
+  
 <%= link_to 'Edit', edit_event_path(@event) %> |
+<%end %>
 <%= link_to 'Back', events_path %>

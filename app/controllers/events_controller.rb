@@ -47,14 +47,11 @@ class EventsController < ApplicationController
   # POST /events.json
   def create
       @event = Event.new(params[:event])
-    if (params[:event][:attachment_file])
+       if (params[:event][:attachment_file])
        uploaded_io = params[:event][:attachment_file]
-       @event.attachment_file= uploaded_io.original_filename
-     
-       File.open(Rails.root.join('public', 'data', uploaded_io.original_filename), 'w') do |file|
-       file.write(uploaded_io.read)
-      end
-    end
+       name=uploaded_io.original_filename
+       @event.attachment_file=name
+       end
     if (params[:new_sub_category])
        @sub_category = SubCategory.create!(:name =>params[:new_sub_category])
        @event.sub_category_id=@sub_category.id
@@ -62,7 +59,18 @@ class EventsController < ApplicationController
     
     respond_to do |format|
       if @event.save
-
+      if uploaded_io
+       @latestevent=Event.last
+       id=@latestevent.id
+       
+       finalname=[id,name].join(",")
+       
+     
+       File.open(Rails.root.join('public', 'data', finalname), 'w') do |file|
+       file.write(uploaded_io.read)
+      end
+    end
+    
         format.html { redirect_to @event, notice: 'Event was successfully created.' }
         format.json { render json: @event, status: :created, location: @event }
       else
@@ -76,9 +84,22 @@ class EventsController < ApplicationController
   # PUT /events/1.json
   def update
     @event = Event.find(params[:id])
-
+    uploaded_io = params[:event][:attachment_file] 
+         name=uploaded_io.original_filename
+   
+    params[:event].delete('attachment_file')
     respond_to do |format|
       if @event.update_attributes(params[:event])
+        if name
+
+        Event.find(@event.id).update_attributes(:attachment_file =>name)
+           
+           finalname=[@event.id,name].join(",")           
+         
+           File.open(Rails.root.join('public', 'data', finalname), 'w') do |file|
+              file.write(uploaded_io.read)
+            end
+        end
         format.html { redirect_to @event, notice: 'Event was successfully updated.' }
         format.json { head :no_content }
       else
@@ -89,12 +110,19 @@ class EventsController < ApplicationController
   end
   def download_file
     @event = Event.find(params[:id])
-    send_file "public/data/#{@event.attachment_file}" 
+    finalname=[params[:id],@event.attachment_file].join(",")
+    send_file "public/data/#{finalname}" 
   end
 
    def other_sub_category
      render :text => '<input type="text" id="new_sub_category" name="new_sub_category">'
    end
+   def delete_file
+      event_id=params[:id]
+      # event=Event.find(event_id).update_attribute('attachment_file', nil)
+      event=Event.find(event_id).update_attributes!(:attachment_file =>nil)
+      render :text => ''
+  end
 
   # DELETE /events/1
   # DELETE /events/1.json
@@ -111,11 +139,11 @@ class EventsController < ApplicationController
   def search
     if params[:search]==""
       
-       @events = SubCategory.find(params[:sub_category_id]).events.page(params[:page])
+       @events = SubCategory.find(params[:sub_category_id]).events.page(params[:page]).per(5)
       #@events=SubCategory.events
     else
 
-    @events=Event.where('name like ?',params[:search]).page(params[:page])
+    @events=Event.where('name like ?',params[:search]).page(params[:page]).per(5)
      end 
     render :layout=>false
 

@@ -23,7 +23,7 @@
     <td><%= event.description %></td>
     
 
-    
+
    <td><%= link_to "#{event.attachment_file}",download_file_event_path(event)%></td>
       <td><%= event.event_date %></td>
     <%  @sub_category = SubCategory.find(event.sub_category_id)%>
@@ -32,8 +32,12 @@
    
  
     <td><%= link_to 'Event page', event %></td>
+    <% unless event.event_date < Date.today %>
     <td><%= link_to 'Edit Event', edit_event_path(event) %></td>
     <td><%= link_to 'Delete Event', event, method: :delete, data: { confirm: 'Are you sure to delete the event?' } %></td>
+    <% else %>
+    <td>Event has occurred<td></td>
+    <% end %>
   </tr>
 <% end %>
 

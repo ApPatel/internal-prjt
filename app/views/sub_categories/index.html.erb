@@ -1,10 +1,10 @@
 
-
-  <h1>Listing Sub Categories</h1>
-
+<div class="listheading">
+  <div class="fontstyling"><h2>Listing Categories for Events:</h2></div>
+</div>
 <table class="tablestyling">
   <tr>
-    <th>Sub Category Name</th>
+    <th>Category</th>
     <th></th>
     <th></th>
     <th></th>
@@ -12,10 +12,10 @@
 
 <% @sub_categories.each do |sub_category| %>
   <tr>
-    <td><%= link_to "#{sub_category.name}" ,list_events_for_category_sub_category_path(sub_category) %></td>
-    <td><%= link_to 'Show', sub_category %></td>
-    <td><%= link_to 'Edit', edit_sub_category_path(sub_category) %></td>
-    <td><%= link_to 'Delete Sub Category', sub_category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td id="category"><%= link_to "#{sub_category.name}" ,list_events_for_category_sub_category_path(sub_category) %></td>
+    <td><%= link_to 'View Category', sub_category %></td>
+    <td><%= link_to 'Modify Category', edit_sub_category_path(sub_category) %></td>
+    <td><%= link_to 'Delete Category', sub_category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>

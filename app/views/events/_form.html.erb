@@ -10,7 +10,7 @@
       </ul>
     </div>
   <% end %>
-<div class="wrapper">
+<div class="wrapper" style="height:700px;">
   <div class="field">
     <%= f.label :'Event name' %><br />
     <%= f.text_field :name %>
@@ -28,17 +28,31 @@
  <%= date_select('event','event_date')%>
 </div>
 
-
-  <div class="field">
-    <%= f.label :'attachment file' %><br />
-   <%= f.file_field :attachment_file %>
+ <div id="deleteattachment">
+  <% if @event.attachment_file %>
+ <div id="uploaded_file">
+  <p>Files Attached with this Event
+  <%= link_to "#{@event.attachment_file}",download_file_event_path(@event)%>
+  <input type="button" name="deleteattachment" value="Delete Attachment" onclick="deleteAttachment(<%=@event.id%>)">
   </div>
-  
+  <div id="newupload_file" style="display:none">
+     <%= f.label :attachment_file %><br />
+     <%= f.file_field :attachment_file%>
+  </div>
+
+  <%else %> 
+  <div class="field">
+    <%= f.label :attachment_file %><br />
+   <%= f.file_field :attachment_file%>
+  </div>
+  <% end%>
+ </div>
   <div class="field" id ="sc">
     <%= f.label :'sub category' %><br />
     <%@sub_categories=SubCategory.all%>
+    
 
- <%=  f.select :sub_category_id, options_for_select(@sub_categories.collect {|sub_category| [sub_category.name , sub_category.id]}), {:include_blank => 'Please Select'}%>
+ <%=  f.select :sub_category_id, options_for_select(@sub_categories.collect {|sub_category| [sub_category.name , sub_category.id]},@event.sub_category_id), {:include_blank => 'Please Select'}%>
   </div>
    <%= link_to "Create New Sub Category for this Event", events_other_sub_category_path ,:id => 'subNewCat'%>
    <div id="other"></div>
@@ -77,7 +91,24 @@
   }      
         return false;
      });
-   
-
   });
+  function deleteAttachment(eventId)
+  {
+   
+      $.ajax({
+    url: '/events/'+eventId+'/delete_file',
+    error: function (XMLHttpRequest, textStatus, errorThrown) {
+      alert("Something went wrong!! Please try again later.");
+                
+    },
+    success: function(data){    
+    jQuery("#uploaded_file").html(data);
+    jQuery('#newupload_file').show();
+    },
+    type: "get"
+  
+ 
+
+ });
+       }
 </script>

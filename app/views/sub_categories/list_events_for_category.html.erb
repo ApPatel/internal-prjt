@@ -1,22 +1,25 @@
 
 <% @sub_category_name=@sub_category.name%>
+<div class="searchbox">
  <div class="field">
     <%= label_tag :'Search' %><br />
     <%= text_field_tag :search %>
   </div>
    <input type="button" name="Go"  value="Go" onclick="search(<%=@sub_category.id%>)" /> 
+ </div>
    <div id="listevents">
-<h1>Listing events for the Sub Category :<%="#{@sub_category_name}"%></h1>
-
+<div class="listheading"><div class="fontstyling"></div>
+<h2>Listing events for the Sub Category :<%="#{@sub_category_name}"%></h2>
+</div>
 <table class="tablestyling">
   <tr>
-    <th>Event Name</th>
-    <th>Agenda of the Event</th>
+    <th>Event</th>
+    <th>Agenda</th>
     <th>Description</th>
-    <th>Attachment file</th>
+    <th>Attachment</th>
     <th>Event date</th>
     
-    <th>Sub category to which event belongs</th>
+    <th>Event Category</th>
     <th></th>
     <th></th>
     <th></th>
@@ -27,20 +30,30 @@
 
 <% @events.each do |event| %>
   <tr>
-    <td><%= event.name %></td>
+    <td id="category"><%= event.name %></td>
     <td><%= event.agenda %></td>
     <td><%= event.description %></td>
+ 
+<% if event.attachment_file %>
   <td><%= link_to "#{event.attachment_file}",download_file_event_path(event)%></td>
+  <% else %>
+  <td>No Attachment</td>
+  <% end %>
+
     <td><%= event.event_date %></td>
      <%  @sub_category = SubCategory.find(event.sub_category_id)%>
-     <td><%= @sub_category.name %></td>
+     <td id="category"><%= link_to "#{@sub_category.name}",sub_category_path %></td>
    
    
       
  
     <td><%= link_to 'Event page', event %></td>
+    <% unless event.event_date < Date.today %>
     <td><%= link_to 'Edit Event', edit_event_path(event) %></td>
-    <td><%= link_to 'Delete Event', event, method: :delete , data: { confirm: 'Are you sure to delete the event?' } %></td>
+    <td><%= link_to 'Delete Event', event, method: :delete, data: { confirm: 'Are you sure to delete the event?' } %></td>
+    <% else %>
+    <td>Event has occurred<td></td>
+    <% end %>
   </tr>
 <% end %>
 </table>
@@ -49,7 +62,6 @@
 <%= paginate @events%>
 </div>
 
-<%= link_to 'Back', sub_categories_path %>
 
 
 <script type="text/javascript">

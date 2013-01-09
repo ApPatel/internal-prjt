@@ -16,7 +16,7 @@
 
 <div id="user_nav">
   <% if user_signed_in? %>
-    Signed in as <%= current_user.email %>. Not you?
+    Signed in as <%= current_user.email %><br />
     <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
 
   <% else %>
@@ -31,9 +31,7 @@
 </body>
 </html>
 </div>
-<% if user_signed_in? %>
 
-<% end %>
 
 
 
@@ -93,39 +91,45 @@ ddaccordion.init({
 <style type="text/css">
 
 .applemenu{
-margin: 5px 0;
-padding: 0;
-width: 170px; /*width of menu*/
-border: 1px solid #9A9A9A;
+background: none repeat scroll 0 0 #D3E2FF;
+    border: 5px groove #75A3FF;
+    border-radius: 20px 20px 20px 20px;
+    height: 257px;
+    margin: 7px 0;
+    padding-left: 4px;
+    padding-right: 4px;
+    width: 287px;
 }
-
 .applemenu div.silverheader a{
 background: silvergradient.gif repeat-x center left;
 font: normal 12px Tahoma, "Lucida Grande", "Trebuchet MS", Helvetica, sans-serif;
-color: white;
+color: #23238e;
 display: block;
 position: relative; /*To help in the anchoring of the ".statusicon" icon image*/
 width: auto;
 padding: 5px 0;
 padding-left: 8px;
 text-decoration: none;
+ text-align: center;
 }
 
 
 .applemenu div.silverheader a:visited, .applemenu div.silverheader a:active{
-color: white;
+color: #23238e;
+ text-align: center;
 }
 
 
 .applemenu div.selected a, .applemenu div.silverheader a:hover{
 background-image:silvergradientover.gif;
-color: white;
+color: #23238e;
+ text-align: center;
 }
 
 .applemenu div.submenu{ /*DIV that contains each sub menu*/
 background: white;
 padding: 5px;
-height: 40px;/*Height that applies to all sub menu DIVs. A good idea when headers are toggled via "mouseover" instead of "click"*/
+   height: 145px;;/*Height that applies to all sub menu DIVs. A good idea when headers are toggled via "mouseover" instead of "click"*/
 background-color: #D3E2FF;
     border-color: #75A3FF;
     border-radius: 20px 20px 20px 20px;
@@ -135,32 +139,36 @@ background-color: #D3E2FF;
     -webkit-border-radius: 20px;
     -khtml-border-radius: 20px;
     border-radius: 20px;
+    text-align: center;
 }
 
 </style>
 
 </head>
+<% if user_signed_in? %>
+
 
 <body>
 <div class="wrapper1">
 <div class="applemenu">
 
-<div class="silverheader"><%= link_to "Profile Management"%></div>
+<div class="silverheader"><%= link_to "Manage Profile"%></div>
   <div class="submenu">
- <%= link_to "Edit profilet" , edit_user_registration_path%><br />
+ <%= link_to "Edit profile" , edit_user_registration_path%><br />
   </div>
-<div class="silverheader"><%= link_to "Event Management"%></div>
+<div class="silverheader"><%= link_to "Manage Event"%></div>
   <div class="submenu">
    <%= link_to "Create Event" , new_event_path%><br />
-    <%= link_to "List Events" ,events_path%>
+    <%= link_to "List Event" ,events_path%>
   </div>
-<div class="silverheader"><%= link_to "Sub Category Management"%></div>
+<div class="silverheader"><%= link_to "Manage Category"%></div>
   <div class="submenu">
 
-  <%= link_to "Create Sub Category", new_sub_category_path%></br>
-  <%= link_to "List Sub category" ,sub_categories_path%>
+  <%= link_to "Create Category", new_sub_category_path%></br>
+  <%= link_to "List Category" ,sub_categories_path%>
  
   </div>
 </div>
 </body>
+<% end %>
 </html>
