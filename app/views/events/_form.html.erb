@@ -33,7 +33,9 @@
  <div id="uploaded_file">
   <p>Files Attached with this Event
   <%= link_to "#{@event.attachment_file}",download_file_event_path(@event)%>
-  <input type="button" name="deleteattachment" value="Delete Attachment" onclick="deleteAttachment(<%=@event.id%>)">
+  <input type="field" hidden="hidden" value=<%="#{@event.id}"%> id="eventId">
+  <%= image_tag "delete.png", :alt => "Delete Attachment", :id=>"deleteImage"
+                           %>
   </div>
   <div id="newupload_file" style="display:none">
      <%= f.label :attachment_file %><br />
@@ -48,13 +50,13 @@
   <% end%>
  </div>
   <div class="field" id ="sc">
-    <%= f.label :'sub category' %><br />
+    <%= f.label :'Category' %><br />
     <%@sub_categories=SubCategory.all%>
     
 
  <%=  f.select :sub_category_id, options_for_select(@sub_categories.collect {|sub_category| [sub_category.name , sub_category.id]},@event.sub_category_id), {:include_blank => 'Please Select'}%>
   </div>
-   <%= link_to "Create New Sub Category for this Event", events_other_sub_category_path ,:id => 'subNewCat'%>
+   <%= link_to "Create New Category for this Event", events_other_sub_category_path ,:id => 'subNewCat'%>
    <div id="other"></div>
 
   
@@ -91,10 +93,14 @@
   }      
         return false;
      });
-  });
-  function deleteAttachment(eventId)
-  {
-   
+     
+      });
+
+ 
+ $('#deleteImage').click(function(){
+ 
+   eventId=$('#eventId').val()
+ 
       $.ajax({
     url: '/events/'+eventId+'/delete_file',
     error: function (XMLHttpRequest, textStatus, errorThrown) {
@@ -107,8 +113,9 @@
     },
     type: "get"
   
- 
+  });
 
  });
-       }
+
+       
 </script>

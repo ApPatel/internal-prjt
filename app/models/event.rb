@@ -4,13 +4,12 @@ class Event < ActiveRecord::Base
    validates :description, :presence => true
    validates :name, :presence => true
    validates :event_date, :presence => true
-   validates :sub_category_id, :presence=>true
+   
    validate :datecheck, :on => :update
   
    #validates_format_of :attachment_file, :with => %r{\.(docx|doc|rb|pdf|txt)$}i, :unless=> "attachment_file.nil?"
   belongs_to :sub_category 
 def datecheck
-  p "==========================="
 	currentDate=Date.today
 	 errors.add(:event_date, "event date cant be less than curernt date") if event_date < currentDate
 

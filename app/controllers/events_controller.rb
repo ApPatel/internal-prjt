@@ -51,8 +51,9 @@ class EventsController < ApplicationController
        uploaded_io = params[:event][:attachment_file]
        name=uploaded_io.original_filename
        @event.attachment_file=name
-       end
+     end
     if (params[:new_sub_category])
+     
        @sub_category = SubCategory.create!(:name =>params[:new_sub_category])
        @event.sub_category_id=@sub_category.id
     end
@@ -85,14 +86,20 @@ class EventsController < ApplicationController
   def update
     @event = Event.find(params[:id])
     uploaded_io = params[:event][:attachment_file] 
-         name=uploaded_io.original_filename
+    if (params[:new_sub_category])
+     
+       @sub_category = SubCategory.create!(:name =>params[:new_sub_category])
+       @event.sub_category_id=@sub_category.id
+    end
    
     params[:event].delete('attachment_file')
+    params[:event].delete('sub_category_id')
     respond_to do |format|
       if @event.update_attributes(params[:event])
-        if name
-
+        if uploaded_io
+              name=uploaded_io.original_filename
         Event.find(@event.id).update_attributes(:attachment_file =>name)
+
            
            finalname=[@event.id,name].join(",")           
          
