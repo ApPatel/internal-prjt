@@ -4,6 +4,9 @@
 <div class="listheading"><div class="fontstyling">
 <h2>Listing events for the Category :<%="#{@sub_category_name}"%></h2></div>
 </div>
+<% if @events.empty? %>
+<div class="noevents"><h3>NO Events matching the keyword</h3></div>
+<% else%>
 <table class="tablesorter">
 
    
@@ -49,5 +52,7 @@
   </tr>
 <% end %>
 </table>
+<% end%>
+
 <%= paginate @events%>
 

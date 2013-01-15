@@ -150,7 +150,7 @@ class EventsController < ApplicationController
       #@events=SubCategory.events
     else
 
-    @events=Event.where('name like ?',params[:search]).page(params[:page]).per(5)
+    @events=Event.where("name like ?","%#{params[:search]}%").page(params[:page]).per(5)
      end 
     render :layout=>false
 

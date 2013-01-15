@@ -2,7 +2,9 @@
 <div class="listheading"><div class="fontstyling">
 <h1>Listing events</h1>
   </div></div>
-
+<% if @events.empty? %>
+<div class="noevents"><h3>NO Events matching the keyword</h3></div>
+<% else%>
 <table class="tablesorter">
  
   <tr>
@@ -49,5 +51,6 @@
 <% end %>
 
 </table>
+<% end %>
 
 
