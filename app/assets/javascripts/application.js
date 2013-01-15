@@ -13,3 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+//= require jquery.tablesorter
+//=require jquery-1.8.3.min
+//=require jquery-latest
+//

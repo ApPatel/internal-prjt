@@ -68,7 +68,7 @@ text-align: right
     margin-top: -20px;
     text-align: right;
 }
-.tablestyling 
+.tablestyling ,.tablesorter
 {
 	height: 342px;
  margin-top: 21px;
@@ -113,7 +113,7 @@ text-align: right
 
 }
 
-.tablestyling table
+.tablestyling ,.tablesorter table
 {
 	width:100%;
 
@@ -122,7 +122,7 @@ text-align: right
 	margin:0px;padding:0px;
 
 }
-.tablestyling tr:last-child td:last-child {
+.tablestyling,.tablesorter tr:last-child td:last-child {
 
 	-moz-border-radius-bottomright:18px;
 
@@ -130,7 +130,7 @@ text-align: right
 
 	border-bottom-right-radius:18px;
 }
-.tablestyling table tr:first-child td:first-child {
+.tablestyling ,.tablesorter table tr:first-child td:first-child {
 
 	-moz-border-radius-topleft:18px;
 
@@ -140,7 +140,7 @@ text-align: right
 
 }
 
-.tablestyling table tr:first-child td:last-child {
+.tablestyling,.tablesorter table tr:first-child td:last-child {
 
 	-moz-border-radius-topright:18px;
 
@@ -148,7 +148,7 @@ text-align: right
 
 	border-top-right-radius:18px;
 
-}.tablestyling tr:last-child td:first-child{
+}.tablestyling ,.tablesorter tr:last-child td:first-child{
 
 	-moz-border-radius-bottomleft:18px;
 
@@ -156,23 +156,23 @@ text-align: right
 
 	border-bottom-left-radius:18px;
 
-}.tablestyling tr:hover td{
+}.tablestyling ,.tablesorter tr:hover td{
 
 	
 
 }
-.tablestyling tr:nth-child(odd){ background-color:#D3E2FF;
+.tablestyling ,.tablesorter tr:nth-child(odd){ background-color:#D3E2FF;
  height: 50px; font-family: arial;
     font-size: 14px; }
 
-.tablestyling tr:nth-child(even)    { background-color:#ffffff; }
+.tablestyling ,.tablesorter tr:nth-child(even)    { background-color:#ffffff; }
 #category
 {
 	color: #23238e;
 	font-style: italic;
     font-weight: bold;
 }
-.tablestyling td{
+.tablestyling ,.tablesorter td{
 	 font-family: fantasy;
     font-size: 12px;
 
@@ -198,21 +198,21 @@ text-align: right
 
 	color:#000000;
 
-}.tablestyling tr:last-child td{
+}.tablestyling ,.tablesorter tr:last-child td{
 
 	border-width:0px 1px 0px 0px;
 
-}.tablestyling tr td:last-child{
+}.tablestyling ,.tablesorter tr td:last-child{
 
 	border-width:0px 0px 1px 0px;
 
-}.tablestyling tr:last-child td:last-child{
+}.tablestyling ,.tablesorter tr:last-child td:last-child{
 
 	border-width:0px 0px 0px 0px;
 
 }
 
-.tablestyling tr:first-child td{
+.tablestyling ,.tablesorter tr:first-child td{
 
 		background:-o-linear-gradient(bottom, #56ffff 5%, #b4eae6 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #56ffff), color-stop(1, #b4eae6) );
 	background:-moz-linear-gradient( center top, #56ffff 5%, #b4eae6 100% );
@@ -237,7 +237,7 @@ text-align: right
 
 }
 
-.tablestyling tr:first-child:hover td{
+.tablestyling ,.tablesorter tr:first-child:hover td{
 
 	background:-o-linear-gradient(bottom, #56ffff 5%, #b4eae6 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #56ffff), color-stop(1, #b4eae6) );
 	background:-moz-linear-gradient( center top, #56ffff 5%, #b4eae6 100% );
@@ -248,13 +248,13 @@ text-align: right
 
 }
 
-.tablestyling tr:first-child td:first-child{
+.tablestyling ,.tablesorter tr:first-child td:first-child{
 
 	border-width:0px 0px 1px 0px;
 
 }
 
-.tablestyling tr:first-child td:last-child{
+.tablestyling ,.tablesorter tr:first-child td:last-child{
 
 	border-width:0px 0px 1px 1px;
 

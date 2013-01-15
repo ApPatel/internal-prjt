@@ -7,7 +7,7 @@ class Event < ActiveRecord::Base
    
    validate :datecheck, :on => :update
   
-   #validates_format_of :attachment_file, :with => %r{\.(docx|doc|rb|pdf|txt)$}i, :unless=> "attachment_file.nil?"
+   validates_format_of :attachment_file, :with => %r{\.(docx|doc|rb|pdf|txt)$}i, :unless=> "attachment_file.nil?"
   belongs_to :sub_category 
 def datecheck
 	currentDate=Date.today

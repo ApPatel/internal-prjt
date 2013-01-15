@@ -3,7 +3,8 @@
 <h1>Listing events</h1>
   </div></div>
 
-<table class="tablestyling">
+<table class="tablesorter">
+ 
   <tr>
     <th>Event</th>
     <th>Agenda</th>
@@ -17,6 +18,8 @@
     <th></th>
     <th></th>
   </tr>
+  
+
 <% @events.each do |event| %>
   <tr>
     <td><%= event.name %></td>

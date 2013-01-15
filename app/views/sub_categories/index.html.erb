@@ -2,13 +2,15 @@
 <div class="listheading">
   <div class="fontstyling"><h2>Listing Categories for Events:</h2></div>
 </div>
-<table class="tablestyling">
+<table class="tablesorter">
+ 
   <tr>
     <th>Category</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
+
 
 <% @sub_categories.each do |sub_category| %>
   <tr>
@@ -18,6 +20,7 @@
     <td><%= link_to 'Delete Category', sub_category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
+
 </table>
 <%= paginate @sub_categories %>
 <br />
