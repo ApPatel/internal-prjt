@@ -153,9 +153,12 @@ class EventsController < ApplicationController
     @events=Event.where("name like ?","%#{params[:search]}%").page(params[:page]).per(5)
 
      end 
+     if params[:page]
     # if request.xhr?
+  else
+
        render :layout=>false
-    # end
+     end
 
   end
 end

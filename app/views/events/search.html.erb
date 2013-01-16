@@ -1,7 +1,17 @@
 
 <% @sub_category_name=@sub_category.name %>
+<div class="searchbox">
+ <div class="field">
+    <%= label_tag :'Search' %><br />
+    <%= text_field_tag :search %>
+  </div>
+   <input type="button" name="Go"  value="Go" onclick="search(<%=@sub_category.id%>)" /> 
+ </div>
 <div class="listheading"><div class="fontstyling">
 <h2>Listing events for the Category :<%="#{@sub_category_name}"%></h2></div>
+</div>
+<div class="listheading"><div class="fontstyling">
+<h3>You searched with keyword :"<%="#{params[:search]}"%>"</h3></div>
 </div>
 <% if @events.empty? %>
 <div class="noevents"><h6>No events matching the keyword</h6></div>
