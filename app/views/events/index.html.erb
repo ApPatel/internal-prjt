@@ -3,10 +3,10 @@
 <h1>Listing events</h1>
   </div></div>
 <% if @events.empty? %>
-<div class="noevents"><h3>NO Events matching the keyword</h3></div>
+<div class="noevents"><h5>No events</h5></div>
 <% else%>
-<table class="tablesorter">
- 
+<table class="tablesorter" id="my_table">
+ <thead>
   <tr>
     <th>Event</th>
     <th>Agenda</th>
@@ -20,7 +20,8 @@
     <th></th>
     <th></th>
   </tr>
-  
+ </thead>
+ <tbody>
 
 <% @events.each do |event| %>
   <tr>
@@ -49,8 +50,17 @@
     <% end %>
   </tr>
 <% end %>
-
+</tbody>
 </table>
 <% end %>
+<script type="text/javascript">
+ $(document).ready(function()
+    {
+     
+        $("#my_table").tablesorter();
+    }
+);
+
+</script>
 
 

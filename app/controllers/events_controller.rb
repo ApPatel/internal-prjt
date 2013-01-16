@@ -144,15 +144,18 @@ class EventsController < ApplicationController
 
   end
   def search
-    if params[:search]==""
-      
-       @events = SubCategory.find(params[:sub_category_id]).events.page(params[:page]).per(5)
-      #@events=SubCategory.events
+    @sub_category = SubCategory.find(params[:id])
+    if params[:search]==""       
+       @events = @sub_category.events.page(params[:page]).per(5)
+      #@events=SubCategory.events      
     else
 
     @events=Event.where("name like ?","%#{params[:search]}%").page(params[:page]).per(5)
+
      end 
-    render :layout=>false
+    # if request.xhr?
+       render :layout=>false
+    # end
 
   end
 end

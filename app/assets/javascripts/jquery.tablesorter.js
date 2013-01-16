@@ -105,7 +105,6 @@
     $.extend({
         tablesorter: new
         function () {
-
             var parsers = [],
                 widgets = [];
 
