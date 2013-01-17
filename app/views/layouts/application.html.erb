@@ -134,7 +134,7 @@ background-color: #D3E2FF;
 <div class="wrapper1">
 <div class="applemenu">
  <% user=current_user%>
- <% if user.role? :admin%>
+ <% if user.role? :Administrator%>
  <div class="silverheader"><%= link_to "Manage Users"%></div>
   <div class="submenu">
  <%= link_to "view Users" , users_path%><br />

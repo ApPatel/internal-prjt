@@ -1,13 +1,19 @@
-<h1>Listing roles</h1>
+<div class="listheading"><div class="fontstyling">
+<h1>Listing Roles</h1>
+  </div></div>
+<% if @roles.empty? %>
+<div class="noevents"><h5>No Roles</h5></div>
+<% else%>
 
-<table>
+<table class="tablesorter" id="my_table">
+<thead>
   <tr>
     <th>Name</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
-
+</thead><tbody>
 <% @roles.each do |role| %>
   <tr>
     <td><%= role.name %></td>
@@ -16,8 +22,17 @@
     <td><%= link_to 'Destroy', role, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
+</tbody>
 </table>
 
 <br />
 
-<%= link_to 'New Role', new_role_path %>
+<script type="text/javascript">
+ $(document).ready(function()
+    {
+     
+        $("#my_table").tablesorter();
+    }
+);
+
+</script>
