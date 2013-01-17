@@ -1,0 +1,42 @@
+<div class="listheading"><div class="fontstyling">
+<h1>Listing Users</h1>
+  </div></div>
+<% if @users.empty? %>
+<div class="noevents"><h5>No Users</h5></div>
+<% else%>
+
+<table class="tablesorter" id="my_table">
+<thead>
+  <tr>
+    <th>Email</th>
+    <th></th>
+    <th></th>
+    <th></th>
+   
+  </tr>
+
+</thead>
+<tbody>
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.email %></td>
+     
+      <td><%= link_to 'Show', user %></td>
+      <td><%= link_to 'Edit', edit_user_path(user) %></td>
+      <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+<% end%>
+<br />
+
+<script type="text/javascript">
+ $(document).ready(function()
+    {
+     
+        $("#my_table").tablesorter();
+    }
+);
+
+</script>

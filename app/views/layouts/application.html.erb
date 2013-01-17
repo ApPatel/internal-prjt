@@ -76,7 +76,7 @@ ddaccordion.init({
 background: none repeat scroll 0 0 #D3E2FF;
     border: 5px groove #75A3FF;
     border-radius: 20px 20px 20px 20px;
-    height: 257px;
+    height: 265px;
     margin: 7px 0;
     padding-left: 4px;
     padding-right: 4px;
@@ -111,7 +111,7 @@ color: #23238e;
 .applemenu div.submenu{ /*DIV that contains each sub menu*/
 background: white;
 padding: 5px;
-   height: 145px;;/*Height that applies to all sub menu DIVs. A good idea when headers are toggled via "mouseover" instead of "click"*/
+   height: 110px;;/*Height that applies to all sub menu DIVs. A good idea when headers are toggled via "mouseover" instead of "click"*/
 background-color: #D3E2FF;
     border-color: #75A3FF;
     border-radius: 20px 20px 20px 20px;
@@ -133,6 +133,14 @@ background-color: #D3E2FF;
 <body>
 <div class="wrapper1">
 <div class="applemenu">
+ <% user=current_user%>
+ <% if user.role? :admin%>
+ <div class="silverheader"><%= link_to "Manage Users"%></div>
+  <div class="submenu">
+ <%= link_to "view Users" , users_path%><br />
+ <%= link_to "New User" ,new_user_path%>
+  </div>
+ <% end%>
 
 <div class="silverheader"><%= link_to "Manage Profile"%></div>
   <div class="submenu">

@@ -33,5 +33,9 @@ describe "#destroy category" do
          response.should render_template(:action => 'index')
         end
     end
+    
 end     
+
+
+
 

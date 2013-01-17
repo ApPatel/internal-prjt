@@ -23,9 +23,10 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
 end
-
+gem "factory_girl_rails", "~> 4.0"
 gem 'jquery-rails'
 gem "pg", "~> 0.14.1"
+gem "cancan"
 group :test, :development do
   gem "rspec-rails", "~> 2.0"
 end
