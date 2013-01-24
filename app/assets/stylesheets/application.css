@@ -303,12 +303,14 @@ text-align: right
 	background-color: #D3E2FF;
     border-style: groove;
     border-width: 5px;
-    margin-left: 276px;
-    margin-top: 65px;
+    
+   
    border-color: #75A3FF;
     height: 318px;
+    margin-left: 1px;
+    margin-top: 20px;
+    width: 71%;
     
-    width: 48%;
     -moz-border-radius: 20px;
     -webkit-border-radius: 20px;
     -khtml-border-radius: 20px;
@@ -340,10 +342,10 @@ text-align: right
     border-radius: 20px 20px 20px 20px;
     border-style: groove;
     border-width: 5px;
-    float: right;
+    position: absolute;
     height: 292px;
-    margin-left: 921px;
-    margin-top: -346px;
+    margin-left: 872px;
+    margin-top: -330px;
     padding-right: 10px;
     width: 25%
 }
