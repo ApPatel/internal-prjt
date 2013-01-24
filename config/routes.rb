@@ -6,7 +6,7 @@ SecondApp::Application.routes.draw do
 
 
   devise_for :users
-   resources :users
+  
 
   
   resources :sub_categories
@@ -42,6 +42,13 @@ match "/events/other_sub_category" => "events#other_sub_category"
        #  get "/events/other_sub_category", :to => "events#other_sub_category"
        # end
   end
+  resources :users do
+    member do
+      get 'delete_pic'
+      get 'change_pic'
+    end
+  end
+
  
 
 
@@ -51,6 +58,8 @@ match "/events/other_sub_category" => "events#other_sub_category"
 
       end
     end
+
+
   #
   #     collection do
   #       get 'sold'

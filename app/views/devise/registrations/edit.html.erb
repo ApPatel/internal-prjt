@@ -1,4 +1,4 @@
-<div class="wrapper">
+<div class="wrapper" style="height:500px;">
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
@@ -14,8 +14,20 @@
   <%= f.password_field :password_confirmation %></div>
 
   <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-  <%= f.password_field :current_password %></div>
+  <%= f.password_field :current_password %></div><br /><br />
 
+ <% if current_user.image_url %>
+ <div id="pic"><%=image_tag current_user.image_url.to_s ,:width=>'50' , :height=>'70', :class=>"style_image"%><br />
+<a id="change_pic">Change picture</a><br />
+<a id="delete_pic">Remove picture</a>
+
+ </div><br />
+ <% else %>
+  <div><%= f.label :'Profile picture'%><br />
+    <%= f.file_field :image %></div><br />
+<% end%>
+ <div id="new_pic" style="display:none;"><%= f.label :'Profile picture'%><br />
+    <%= f.file_field :image %></div><br />
   <div><%= f.submit "Update" %></div>
 <% end %>
 
@@ -25,3 +37,44 @@
 
 <%= link_to "Back", :back %>
 </div>
+<script type="text/javascript">
+ $('#delete_pic').click(function(){
+ 
+var userId="<%=current_user.id%>";
+
+      $.ajax({
+    url: '/users/'+userId+'/delete_pic',
+    error: function (XMLHttpRequest, textStatus, errorThrown) {
+      alert("Something went wrong!! Please try again later.");
+                
+    },
+    success: function(data){    
+    jQuery("#pic").html(data);
+    jQuery('#new_pic').show();
+    },
+    type: "get"
+  
+  });
+
+ });
+
+ $('#change_pic').click(function(){
+ 
+var userId="<%=current_user.id%>";
+
+      $.ajax({
+    url: '/users/'+userId+'/change_pic',
+    error: function (XMLHttpRequest, textStatus, errorThrown) {
+      alert("Something went wrong!! Please try again later.");
+                
+    },
+    success: function(data){    
+    jQuery("#pic").html(data);
+    jQuery('#new_pic').show();
+    },
+    type: "get"
+  
+  });
+
+ });
+ </script>

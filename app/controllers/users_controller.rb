@@ -82,4 +82,17 @@ class UsersController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  def delete_pic
+      user_id=params[:id]
+      user=User.find(user_id)
+      
+
+      user.remove_image!
+      user.save!
+
+      render :text => ''
+  end
+  def change_pic    
+      render :text => ''
+  end
 end

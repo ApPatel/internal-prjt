@@ -11,13 +11,43 @@
  *= require_self
  *= require_tree .
  */
- 
+ #change_pic
+ {
+    color:#75A3FF;
+ }
+  #delete_pic
+ {
+    color:#75A3FF;
+ }
+ .avatar
+ {
+    margin-left: 1107px;
+    
+    margin-top: -60px;
+ }
  .heading
  {
  	   color: #75A3FF;
      text-align:center;
      margin-top: 10px;
 
+
+ }
+ .style_image_view
+ {
+         border-radius: 10px 10px 10px 10px;
+   
+    margin-left: -3px;
+    margin-top: 0;
+    width: 66px
+ }
+ .style_image
+ {
+     border-radius: 10px 10px 10px 10px;
+    height: 80px;
+    margin-top: -20px;
+    width: 66px;
+    margin-left:-19px;
  }
  .listheading
  {
@@ -29,6 +59,11 @@
    height: 50px;
    width:50%;
    text-align: center;
+ }
+ .photo
+ {
+    border-radius:20px;
+       background-color: #D3E2FF;
  }
  .noevents
  {
@@ -86,9 +121,9 @@ text-align: right
 }
 #user_nav
 {
-  margin-right: 15px;
-    margin-top: -20px;
-    text-align: right;
+  margin-left: 797px;
+    
+    margin-top: -17px;
 }
 .tablestyling ,.tablesorter
 {
@@ -278,6 +313,7 @@ text-align: right
     -webkit-border-radius: 20px;
     -khtml-border-radius: 20px;
     border-radius: 20px;
+    
 }
 .rightdiv
 {

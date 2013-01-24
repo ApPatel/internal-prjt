@@ -8,6 +8,7 @@
 <table class="tablesorter" id="my_table">
 <thead>
   <tr>
+    <th style="width:60px;"></th>
     <th>Email</th>
     <th></th>
     <th></th>
@@ -19,11 +20,20 @@
 <tbody>
   <% @users.each do |user| %>
     <tr>
-      <td><%= user.email %></td>
-     
+    
+     <td style="width:60px;"> 
+      <% if user.image_url %>
+      <%=image_tag user.image_url.to_s ,:width=>'50' , :height=>'70',:class=>"style_image_view"%>
+      <% else %>
+       <%=image_tag "avatar.png", :alt => "avatar" ,:width=>'50', :height=>'70',:class=>"style_image_view"%>
+      <% end %>
+    </td>
+       <td><%= user.email %>
       <td><%= link_to 'Show', user %></td>
       <td><%= link_to 'Edit', edit_user_path(user) %></td>
       <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
+      
+     
     </tr>
   <% end %>
   </tbody>

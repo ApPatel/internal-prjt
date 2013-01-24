@@ -27,6 +27,7 @@ gem "factory_girl_rails", "~> 4.0"
 gem 'jquery-rails'
 gem "pg", "~> 0.14.1"
 gem "cancan"
+gem 'carrierwave'
 group :test, :development do
   gem "rspec-rails", "~> 2.0"
 end
