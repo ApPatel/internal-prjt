@@ -1,4 +1,4 @@
-class AddImageToUsers < ActiveRecord::Migration
+class AddImageToPaintings < ActiveRecord::Migration
   def change
     add_column :users, :image, :string
   end
