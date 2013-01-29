@@ -10,7 +10,6 @@ gem 'devise'
 gem 'execjs'
 gem 'libv8'
 gem 'therubyracer'
-gem 'calendar_date_select', :git => 'http://github.com/paneq/calendar_date_select.git', :branch => 'rails3test' 
 gem 'kaminari'
 # Gems used only for assets and not required
 # in production environments by default.
