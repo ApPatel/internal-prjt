@@ -1,13 +1,11 @@
 <div class="listheading">
-  <div class="fontstyling"><h2>Listing Categories for Events:</h2></div>
+  <div class="fontstyling"><h2>Category List</h2></div>
 </div>
 <table class="tablesorter" id="my_table">
  <thead >
   <tr>
-    <th>Category</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Category<th><th></th></th></th>
+    
   </tr>
 </thead>
 <tbody>
@@ -15,9 +13,8 @@
 <% @sub_categories.each do |sub_category| %>
   <tr>
     <td id="category"><%= link_to "#{sub_category.name}" ,list_events_for_category_sub_category_path(sub_category) %></td>
-    <td><%= link_to 'View Category', sub_category %></td>
-    <td><%= link_to 'Modify Category', edit_sub_category_path(sub_category) %></td>
-    <td><%= link_to 'Delete Category', sub_category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+   <td id="actioncolumn"> <%= link_to(image_tag("editIcon.png"), edit_sub_category_path(sub_category)) %></td>
+    <td id="actioncolumn"><%= link_to(image_tag("delete.png"),sub_category, method: :delete, data: { confirm: 'Are you sure?' }) %></td>
   </tr>
 <% end %>
 </tbody>

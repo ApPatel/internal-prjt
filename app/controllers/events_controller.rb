@@ -115,11 +115,40 @@ class EventsController < ApplicationController
       end
     end
   end
+  require 'net/smtp'
   def download_file
     @event = Event.find(params[:id])
     finalname=[params[:id],@event.attachment_file].join(",")
     send_file "public/data/#{finalname}" 
   end
+ def remind_users
+   @event = Event.find(params[:id])
+   @users=User.all
+ opts={}
+   opts[:server]      ||= 'localhost'
+  opts[:from]        ||= 'hemali.gjain@tcs.com'
+  opts[:from_alias]  ||= 'Example Emailer'
+  opts[:subject]     ||= "You need to see this"
+  opts[:body]        ||= "Important stuff!"
+  Net::SMTP.start('mail.your-domain.com', 
+                25, 
+                'localhost', 
+                'username', 'password')
+  @users.each do |user| 
+    to=user.email
+  msg = <<END_OF_MESSAGE
+From: #{opts[:from_alias]} <#{opts[:from]}>
+To: <#{to}>
+Subject: #{opts[:subject]}
+
+#{opts[:body]}
+END_OF_MESSAGE
+
+ 
+    smtp.send_message msg, opts[:from], to
+  end
+  end
+
 
    def other_sub_category
      render :text => '<input type="text" id="new_sub_category" name="new_sub_category">'

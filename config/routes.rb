@@ -36,7 +36,8 @@ match "/events/other_sub_category" => "events#other_sub_category"
        member do         
          get 'download_file'
          get 'delete_file'
-         get 'search'        
+         get 'search'   
+         get 'remind_users'     
        end
        # collection do
        #  get "/events/other_sub_category", :to => "events#other_sub_category"

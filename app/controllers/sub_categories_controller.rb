@@ -44,7 +44,7 @@ class SubCategoriesController < ApplicationController
 
     respond_to do |format|
       if @sub_category.save
-        format.html { redirect_to @sub_category, notice: 'Sub category was successfully created.' }
+        format.html { redirect_to sub_categories_url, notice: 'Sub category was successfully created.' }
         format.json { render json: @sub_category, status: :created, location: @sub_category }
       else
         format.html { render action: "new" }
@@ -60,7 +60,7 @@ class SubCategoriesController < ApplicationController
 
     respond_to do |format|
       if @sub_category.update_attributes(params[:sub_category])
-        format.html { redirect_to @sub_category, notice: 'Sub category was successfully updated.' }
+        format.html { redirect_to sub_categories_url, notice: 'Sub category was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

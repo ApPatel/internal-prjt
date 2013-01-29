@@ -4,13 +4,13 @@ gem 'rails', '3.2.9'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
+ gem "mail_view", "~> 1.0.3"
 gem 'mysql2'
 gem 'devise'
 gem 'execjs'
 gem 'libv8'
 gem 'therubyracer'
-
+gem 'calendar_date_select', :git => 'http://github.com/paneq/calendar_date_select.git', :branch => 'rails3test' 
 gem 'kaminari'
 # Gems used only for assets and not required
 # in production environments by default.

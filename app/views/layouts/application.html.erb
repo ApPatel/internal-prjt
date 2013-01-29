@@ -1,3 +1,6 @@
+
+<%= javascript_include_tag "calendar_date_select" %>
+<%= stylesheet_link_tag "calendar_date_select" %>
 <!DOCTYPE html>
 <html>
  <p class="notice"><%= notice %></p>
@@ -9,16 +12,19 @@
     <head>
   <title>SecondApp</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
+
   <%= javascript_include_tag "application" %>
+  <%= calendar_date_select_includes %> 
+
   <%= csrf_meta_tags %>
 </head>
 <body>
 
 <div id="user_nav">
   <% if user_signed_in? %>
-    Signed in as <%= current_user.email %><br />
+    Signed in as <%= current_user.email %>
      <%if current_user.role? :Administrator%>
-     Your role is:Administrator
+     | Administrator |
      <% end %>
     <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
 

@@ -1,3 +1,10 @@
+GIT
+  remote: http://github.com/paneq/calendar_date_select.git
+  revision: 8e7ec79435a68665df40b14bd90f47e6ac5e9135
+  branch: rails3test
+  specs:
+    calendar_date_select (1.16.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -71,6 +78,8 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    mail_view (1.0.3)
+      tilt
     mime-types (1.19)
     multi_json (1.5.0)
     mysql2 (0.3.11)
@@ -142,6 +151,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  calendar_date_select!
   cancan
   carrierwave
   coffee-rails (~> 3.2.1)
@@ -151,6 +161,7 @@ DEPENDENCIES
   jquery-rails
   kaminari
   libv8
+  mail_view (~> 1.0.3)
   mysql2
   pg (~> 0.14.1)
   rails (= 3.2.9)

@@ -16,50 +16,31 @@
 <div class="noevents"><h5>No events for this category</h5></div>
 <% else%>
 <table class="tablesorter" id="my_table">
-  <thead>
+ <thead>
   <tr>
     <th>Event</th>
-    <th>Agenda</th>
     <th>Description</th>
-    <th>Attachment</th>
     <th>Event date</th>
     
-    <th>Event Category</th>
-    <th></th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Event Category  <th></th>
+    <th></th></th>
+   
+   
   </tr>
-</thead>
-<tbody>
-
+ </thead>
+ <tbody>
 
 <% @events.each do |event| %>
   <tr>
-    <td id="category"><%= event.name %></td>
-    <td><%= event.agenda %></td>
-    <td><%= event.description %></td>
- 
-<% if event.attachment_file %>
-  <td><%= link_to "#{event.attachment_file}",download_file_event_path(event)%></td>
-  <% else %>
-  <td>No Attachment</td>
-  <% end %>
+   <td><%= link_to "#{event.name}", event %></td>
 
-    <td><%= event.event_date %></td>
-     <%  @sub_category = SubCategory.find(event.sub_category_id)%>
-     <td id="category"><%= link_to "#{@sub_category.name}",sub_category_path %></td>
-   
-   
-      
- 
-    <td><%= link_to 'Event page', event %></td>
-    <% unless event.event_date < Date.today %>
-    <td><%= link_to 'Edit Event', edit_event_path(event) %></td>
-    <td><%= link_to 'Delete Event', event, method: :delete, data: { confirm: 'Are you sure to delete the event?' } %></td>
-    <% else %>
-    <td>Event has occurred<td></td>
-    <% end %>
+    <td><%= event.description %></td>
+    
+      <td><%= event.event_date %></td>
+    <%  @sub_category = SubCategory.find(event.sub_category_id)%>
+     <td><%= @sub_category.name %></td>
+     <td id="actioncolumn"> <%= link_to(image_tag("editIcon.png"), edit_event_path(event)) %></td>
+    <td id="actioncolumn"><%= link_to(image_tag("delete.png"),event, method: :delete, data: { confirm: 'Are you sure?' }) %></td>    
   </tr>
 <% end %>
 </tbody>

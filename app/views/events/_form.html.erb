@@ -11,54 +11,59 @@
     </div>
   <% end %>
 <div class="wrapper" style="height:700px;">
+  <table>
+    <tr>
   <div class="field">
-    <%= f.label :'Event name' %><br />
-    <%= f.text_field :name %>
+    <td><%= f.label :'Event name' %></td>
+    <td><%= f.text_field :name %></td>
+   </tr>
   </div>
   <div class="field">
-    <%= f.label :'Event agenda' %><br />
-    <%= f.text_field :agenda %>
+   <tr><td> <%= f.label :'Event agenda(500 characters)' %></td>
+    <td><%= f.text_area :agenda ,:cols => "50", :rows => "5",:maxlength=>"500",:onkeyup=>"return DjCheckMaxlength(this)" %></td>
+  </tr>
   </div>
   <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
+    <tr><td><%= f.label :'description(200 characters)' %></td>
+    <td><%= f.text_area :description,:cols => "50", :rows => "5",:maxlength=>"200",:onkeyup=>"return DjCheckMaxlength(this)" %></td></tr>
   </div>
  <div class="field">
-     <%= f.label :'event date' %><br />
- <%= date_select('event','event_date')%>
+     <tr><td><%= f.label :'event date' %></td>
+ <td><%= date_select('event','event_date')%></td></tr>
 </div>
 
  <div id="deleteattachment">
   <% if @event.attachment_file %>
  <div id="uploaded_file">
-  <p>Files Attached with this Event
-  <%= link_to "#{@event.attachment_file}",download_file_event_path(@event)%>
+  <p><tr><td>Files Attached with this Event</td>
+  <td><%= link_to "#{@event.attachment_file}",download_file_event_path(@event)%>
   <input type="field" hidden="hidden" value=<%="#{@event.id}"%> id="eventId">
   <%= image_tag "delete.png", :alt => "Delete Attachment", :id=>"deleteImage"
-                           %>
+                           %></td></tr>
   </div>
   <div id="newupload_file" style="display:none">
-     <%= f.label :attachment_file %><br />
-     <%= f.file_field :attachment_file%>
+     <tr><td><%= f.label :attachment_file %></td>
+     <td><%= f.file_field :attachment_file%></td></tr>
   </div>
 
   <%else %> 
   <div class="field">
-    <%= f.label :attachment_file %><br />
-   <%= f.file_field :attachment_file%>
+    <tr><td><%= f.label :attachment_file %></td>
+   <td><%= f.file_field :attachment_file%></td></tr>
   </div>
   <% end%>
  </div>
   <div class="field" id ="sc">
-    <%= f.label :'Category' %><br />
+    <tr><td><%= f.label :'Category' %></td>
     <%@sub_categories=SubCategory.all%>
     
 
- <%=  f.select :sub_category_id, options_for_select(@sub_categories.collect {|sub_category| [sub_category.name , sub_category.id]},@event.sub_category_id), {:include_blank => 'Please Select'}%>
+ <td><%=  f.select :sub_category_id, options_for_select(@sub_categories.collect {|sub_category| [sub_category.name , sub_category.id]},@event.sub_category_id), {:include_blank => 'Please Select'}%></td></tr>
   </div>
-   <%= link_to "Create New Category for this Event", events_other_sub_category_path ,:id => 'subNewCat'%>
-   <div id="other"></div>
+   <tr><td><%= link_to "Create New Category for this Event", events_other_sub_category_path ,:id => 'subNewCat'%></td>
+   <td><div id="other"></div></td></tr>
 
+</table>
   
   <div class="actions">
     <%= f.submit %>
@@ -116,6 +121,15 @@
   });
 
  });
+function DjCheckMaxlength(oInObj)
+{
+      var iMaxLen = parseInt(oInObj.getAttribute('maxlength'));
+      var iCurLen = oInObj.value.length;
 
+      if ( oInObj.getAttribute && iCurLen > iMaxLen )
+      {
+          oInObj.value = oInObj.value.substring(0, iMaxLen);
+      }
+}
        
 </script>
