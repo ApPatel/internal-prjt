@@ -11,6 +11,63 @@
  *= require_self
  *= require_tree .
  */
+ .applemenu{
+background: none repeat scroll 0 0 #D3E2FF;
+    border: 5px groove #75A3FF;
+    border-radius: 20px 20px 20px 20px;
+    height: 280px;
+    padding-left: 5px;
+    padding-right: -79px;
+    position: absolute;
+    width: 289px;
+}
+.applemenu div.silverheader a{
+background: silvergradient.gif repeat-x center left;
+font: normal 12px Tahoma, "Lucida Grande", "Trebuchet MS", Helvetica, sans-serif;
+color: #23238e;
+display: block;
+position: relative; /*To help in the anchoring of the ".statusicon" icon image*/
+width: auto;
+padding: 5px 0;
+padding-left: 8px;
+text-decoration: none;
+ text-align: center;
+}
+
+
+.applemenu div.silverheader a:visited, .applemenu div.silverheader a:active{
+color: #23238e;
+ text-align: center;
+}
+
+
+.applemenu div.selected a, .applemenu div.silverheader a:hover{
+background-image:silvergradientover.gif;
+color: #23238e;
+ text-align: center;
+}
+
+.applemenu div.submenu{ /*DIV that contains each sub menu*/
+background: white;
+padding: 5px;
+   height: 66px;;/*Height that applies to all sub menu DIVs. A good idea when headers are toggled via "mouseover" instead of "click"*/
+background-color: #D3E2FF;
+    border-color: #75A3FF;
+    border-radius: 20px 20px 20px 20px;
+    border-style: groove;
+    border-width: 5px;
+     -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -khtml-border-radius: 20px;
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 41px
+}
+ #pic
+{
+      margin-left: 349px;
+      margin-top: 50px;
+}
  #change_pic
  {
     color:#75A3FF;
@@ -30,6 +87,7 @@
  	   color: #75A3FF;
      text-align:center;
      margin-top: 10px;
+     float:left;
 
 
  }
@@ -96,7 +154,7 @@
 .header
 {
 	 background-color: #D3E2FF;
-    height: 60px;
+    height: 67px;
     margin-top: 5px;
     padding-top: 32px;
     text-align: center;
@@ -129,11 +187,11 @@ text-align: right
 }
 .tablestyling ,.tablesorter
 {
-	height: 342px;
+
  margin-top: 21px;
  padding:0px;
 
-	width:70%;
+	width:67%;
 	box-shadow: 10px 10px 5px #888888;
 
 	border: 5px groove #75A3FF;
@@ -169,6 +227,7 @@ text-align: right
 	-webkit-border-top-left-radius:18px;
 
 	border-top-left-radius:18px;
+    float: left;
 
 }
 
@@ -312,7 +371,7 @@ text-align: right
     
    
    border-color: #75A3FF;
-    height: 318px;
+  
     margin-left: 1px;
     margin-top: 20px;
     width: 67%;
@@ -321,6 +380,7 @@ text-align: right
     -webkit-border-radius: 20px;
     -khtml-border-radius: 20px;
     border-radius: 20px;
+    float:left;
     
 }
 .rightdiv
@@ -340,24 +400,16 @@ text-align: right
 .wrapper1
 {
 	
-     -moz-border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -khtml-border-radius: 20px;
-    background-color: #D3E2FF;
-    border-color: #75A3FF;
-    border-radius: 20px 20px 20px 20px;
-    border-style: groove;
-    border-width: 5px;
-    position: absolute;
-    height: 292px;
-    margin-left: 932px;
-    margin-top: -330px;
-    padding-right: 10px;
-    width: 25%
-}
+    width: 30%;
+    float:right;
+    
+
+    }
 .pagination
 {
-	margin-right: 340px;
+	   float: left;
+    margin-left: -120px;
+    margin-top: 317px;
    }
 ul.pagination
 {

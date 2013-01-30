@@ -2945,4 +2945,251 @@ To git@heroku.com:warm-wave-5749.git
 [36m2013-01-29T10:46:43+00:00 app[web.1]:[0m     19:   <%= csrf_meta_tags %>
 [35m2013-01-29T10:46:44+00:00 heroku[api]:[0m Release v49 created by hemali.gjain@tcs.com
 [35m2013-01-29T10:46:44+00:00 heroku[api]:[0m Deploy 128f020 by hemali.gjain@tcs.com
+[36m2013-01-29T10:46:44+00:00 heroku[web.1]:[0m State changed from up to starting
+[32m2013-01-29T10:46:45+00:00 heroku[slugc]:[0m Slug compilation finished
+[36m2013-01-29T10:46:47+00:00 heroku[web.1]:[0m Stopping all processes with SIGTERM
+[36m2013-01-29T10:46:48+00:00 app[web.1]:[0m 	/usr/local/lib/ruby/1.9.1/webrick/server.rb:90:in `select'
+[36m2013-01-29T10:46:48+00:00 app[web.1]:[0m [2013-01-29 10:46:48] ERROR SignalException: SIGTERM
+[36m2013-01-29T10:46:49+00:00 heroku[web.1]:[0m Starting process with command `bundle exec rails server -p 21364`
+[36m2013-01-29T10:46:56+00:00 app[web.1]:[0m DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/1/4/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/config/environment.rb:5)
+[36m2013-01-29T10:46:56+00:00 app[web.1]:[0m DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/1/4/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/config/environment.rb:5)
+[36m2013-01-29T10:46:56+00:00 app[web.1]:[0m DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/1/4/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/config/environment.rb:5)
+[36m2013-01-29T10:46:57+00:00 heroku[web.1]:[0m Error R12 (Exit timeout) -> At least one process failed to exit within 10 seconds of SIGTERM
+[36m2013-01-29T10:46:57+00:00 heroku[web.1]:[0m Stopping remaining processes with SIGKILL
+[36m2013-01-29T10:46:59+00:00 heroku[web.1]:[0m Process exited with status 137
+[36m2013-01-29T10:46:59+00:00 app[web.1]:[0m [2013-01-29 10:46:59] INFO  WEBrick::HTTPServer#start: pid=2 port=21364
+[36m2013-01-29T10:46:59+00:00 app[web.1]:[0m [2013-01-29 10:46:59] INFO  WEBrick 1.3.1
+[36m2013-01-29T10:46:59+00:00 app[web.1]:[0m [2013-01-29 10:46:59] INFO  ruby 1.9.2 (2011-07-09) [x86_64-linux]
+[36m2013-01-29T10:47:00+00:00 heroku[web.1]:[0m State changed from starting to up
+[36m2013-01-29T10:47:01+00:00 app[web.1]:[0m Started GET "/" for 115.249.215.66 at 2013-01-29 10:47:01 +0000
+[36m2013-01-29T10:47:01+00:00 app[web.1]:[0m => Ctrl-C to shutdown server
+[36m2013-01-29T10:47:01+00:00 app[web.1]:[0m => Rails 3.2.9 application starting in production on http://0.0.0.0:21364
+[36m2013-01-29T10:47:01+00:00 app[web.1]:[0m => Call with -d to detach
+[36m2013-01-29T10:47:01+00:00 app[web.1]:[0m => Booting WEBrick
+[36m2013-01-29T10:47:01+00:00 app[web.1]:[0m WARN: tilt autoloading 'sass' in a non thread-safe way; explicit require 'sass' suggested.
+[36m2013-01-29T10:47:02+00:00 app[web.1]:[0m WARN: tilt autoloading 'coffee_script' in a non thread-safe way; explicit require 'coffee_script' suggested.
+]0;hemal@ubuntu: ~/second_apphemal@ubuntu:~/second_app$ git add .
+]0;hemal@ubuntu: ~/second_apphemal@ubuntu:~/second_app$ git commit -m ""c"o"r"e"c"t"i"o"n"
+[master 04910ea] corection
+ 2 files changed, 241 insertions(+), 4 deletions(-)
+]0;hemal@ubuntu: ~/second_apphemal@ubuntu:~/second_app$ git commit -m "corection"add .[K[K[K[K[K[Kpush
+heUsername for 'https://github.com': mali.gjain@tcs.com
+Password for 'https://hemali.gjain@tcs.com@github.com': 
+To https://github.com/hemalijain/internal-prjt.git
+   128f020..04910ea  master -> master
+]0;hemal@ubuntu: ~/second_apphemal@ubuntu:~/second_app$ git push herolu master
+fatal: 'herolu' does not appear to be a git repository
+fatal: The remote end hung up unexpectedly
+]0;hemal@ubuntu: ~/second_apphemal@ubuntu:~/second_app$ git push herolu master[1P[1@k
+Counting objects: 13, done.
+Compressing objects:  16% (1/6)   Compressing objects:  33% (2/6)   Compressing objects:  50% (3/6)   Compressing objects:  66% (4/6)   Compressing objects:  83% (5/6)   Compressing objects: 100% (6/6)   Compressing objects: 100% (6/6), done.
+Writing objects:  14% (1/7)   Writing objects:  28% (2/7)   Writing objects:  42% (3/7)   Writing objects:  57% (4/7)   Writing objects:  71% (5/7)   Writing objects:  85% (6/7)   Writing objects: 100% (7/7)   Writing objects: 100% (7/7), 1.72 KiB, done.
+Total 7 (delta 5), reused 0 (delta 0)
+-----> Ruby/Rails app detected
+-----> Installing dependencies using Bundler version 1.3.0.pre.5
+       Running: bundle install --without development:test --path vendor/bundle --binstubs vendor/bundle/bin --deployment
+       Using rake (10.0.3)
+       Using i18n (0.6.1)
+       Using multi_json (1.5.0)
+       Using activesupport (3.2.9)
+       Using builder (3.0.4)
+       Using activemodel (3.2.9)
+       Using erubis (2.7.0)
+       Using journey (1.0.4)
+       Using rack (1.4.1)
+       Using rack-cache (1.2)
+       Using rack-test (0.6.2)
+       Using hike (1.2.1)
+       Using tilt (1.3.3)
+       Using sprockets (2.2.2)
+       Using actionpack (3.2.9)
+       Using mime-types (1.19)
+       Using polyglot (0.3.3)
+       Using treetop (1.4.12)
+       Using mail (2.4.4)
+       Using actionmailer (3.2.9)
+       Using arel (3.0.2)
+       Using tzinfo (0.3.35)
+       Using activerecord (3.2.9)
+       Using activeresource (3.2.9)
+       Using bcrypt-ruby (3.0.1)
+       Using cancan (1.6.8)
+       Using carrierwave (0.8.0)
+       Using coffee-script-source (1.4.0)
+       Using execjs (1.4.0)
+       Using coffee-script (2.2.0)
+       Using rack-ssl (1.3.2)
+       Using json (1.7.5)
+       Using rdoc (3.12)
+       Using thor (0.16.0)
+       Using railties (3.2.9)
+       Using coffee-rails (3.2.2)
+       Using orm_adapter (0.4.0)
+       Using warden (1.2.1)
+       Using devise (2.1.2)
+       Using factory_girl (4.1.0)
+       Using factory_girl_rails (4.1.0)
+       Using jquery-rails (2.1.4)
+       Using kaminari (0.14.1)
+       Using libv8 (3.11.8.4)
+       Using mysql2 (0.3.11)
+       Using pg (0.14.1)
+       Using bundler (1.3.0.pre.5)
+       Using rails (3.2.9)
+       Using ref (1.0.2)
+       Using sass (3.2.3)
+       Using sass-rails (3.2.5)
+       Using therubyracer (0.11.0)
+       Using uglifier (1.3.0)
+       Your bundle is complete! It was installed into ./vendor/bundle
+       Cleaning up the bundler cache.
+       Would have removed mail_view (1.0.3)
+       Would have removed calendar_date_select (8e7ec79435a6)
+-----> Writing config/database.yml to read from DATABASE_URL
+-----> Preparing app for Rails asset pipeline
+       Running: rake assets:precompile
+       rake aborted!
+       could not connect to server: Connection refused
+       Is the server running on host "127.0.0.1" and accepting
+       TCP/IP connections on port 5432?
+       /tmp/build_ax83ee9j5ird/vendor/bundle/ruby/1.9.1/gems/activerecord-3.2.9/lib/active_record/connection_adapters/postgresql_adapter.rb:1208:in `initialize'
+       /tmp/build_ax83ee9j5ird/vendor/bundle/ruby/1.9.1/gems/activerecord-3.2.9/lib/active_record/connection_adapters/postgresql_adapter.rb:1208:in `new'
+       /tmp/build_ax83ee9j5ird/vendor/bundle/ruby/1.9.1/gems/activerecord-3.2.9/lib/active_record/connection_adapters/postgresql_adapter.rb:1208:in `connect'
+       /tmp/build_ax83ee9j5ird/vendor/bundle/ruby/1.9.1/gems/activerecord-3.2.9/lib/active_record/connection_adapters/postgresql_adapter.rb:326:in `initialize'
+       /tmp/build_ax83ee9j5ird/vendor/bundle/ruby/1.9.1/gems/activerecord-3.2.9/lib/active_record/connection_adapters/postgresql_adapter.rb:28:in `new'
+       /tmp/build_ax83ee9j5ird/vendor/bundle/ruby/1.9.1/gems/activerecord-3.2.9/lib/active_record/connection_adapters/postgresql_adapter.rb:28:in `postgresql_connection'
+       /tmp/build_ax83ee9j5ird/vendor/bundle/ruby/1.9.1/gems/activerecord-3.2.9/lib/active_record/connection_adapters/abstract/connection_pool.rb:315:in `new_connection'
+       /tmp/build_ax83ee9j5ird/vendor/bundle/ruby/1.9.1/gems/activerecord-3.2.9/lib/active_record/connection_adapters/abstract/connection_pool.rb:325:in `checkout_new_connection'
+       /tmp/build_ax83ee9j5ird/vendor/bundle/ruby/1.9.1/gems/activerecord-3.2.9/lib/active_record/connection_adapters/abstract/connection_pool.rb:247:in `block (2 levels) in checkout'
+       /tmp/build_ax83ee9j5ird/vendor/bundle/ruby/1.9.1/gems/activerecord-3.2.9/lib/active_record/connection_adapters/abstract/connection_pool.rb:242:in `loop'
+       /tmp/build_ax83ee9j5ird/vendor/bundle/ruby/1.9.1/gems/activerecord-3.2.9/lib/active_record/connection_adapters/abstract/connection_pool.rb:242:in `block in checkout'
+       /tmp/build_ax83ee9j5ird/vendor/bundle/ruby/1.9.1/gems/activerecord-3.2.9/lib/active_record/connection_adapters/abstract/connection_pool.rb:239:in `checkout'
+       /tmp/build_ax83ee9j5ird/vendor/bundle/ruby/1.9.1/gems/activerecord-3.2.9/lib/active_record/connection_adapters/abstract/connection_pool.rb:102:in `block in connection'
+       /tmp/build_ax83ee9j5ird/vendor/bundle/ruby/1.9.1/gems/activerecord-3.2.9/lib/active_record/connection_adapters/abstract/connection_pool.rb:101:in `connection'
+       /tmp/build_ax83ee9j5ird/vendor/bundle/ruby/1.9.1/gems/activerecord-3.2.9/lib/active_record/connection_adapters/abstract/connection_pool.rb:410:in `retrieve_connection'
+       /tmp/build_ax83ee9j5ird/vendor/bundle/ruby/1.9.1/gems/activerecord-3.2.9/lib/active_record/connection_adapters/abstract/connection_specification.rb:171:in `retrieve_connection'
+       /tmp/build_ax83ee9j5ird/vendor/bundle/ruby/1.9.1/gems/activerecord-3.2.9/lib/active_record/connection_adapters/abstract/connection_specification.rb:145:in `connection'
+       /tmp/build_ax83ee9j5ird/vendor/bundle/ruby/1.9.1/gems/activerecord-3.2.9/lib/active_record/model_schema.rb:308:in `clear_cache!'
+       /tmp/build_ax83ee9j5ird/vendor/bundle/ruby/1.9.1/gems/activerecord-3.2.9/lib/active_record/railtie.rb:97:in `block (2 levels) in <class:Railtie>'
+       /tmp/build_ax83ee9j5ird/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:418:in `_run__317551024557331637__prepare__1218178742392418886__callbacks'
+       /tmp/build_ax83ee9j5ird/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:405:in `__run_callback'
+       /tmp/build_ax83ee9j5ird/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:385:in `_run_prepare_callbacks'
+       /tmp/build_ax83ee9j5ird/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:81:in `run_callbacks'
+       /tmp/build_ax83ee9j5ird/vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.9/lib/action_dispatch/middleware/reloader.rb:74:in `prepare!'
+       /tmp/build_ax83ee9j5ird/vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.9/lib/action_dispatch/middleware/reloader.rb:48:in `prepare!'
+       /tmp/build_ax83ee9j5ird/vendor/bundle/ruby/1.9.1/gems/railties-3.2.9/lib/rails/application/finisher.rb:47:in `block in <module:Finisher>'
+       /tmp/build_ax83ee9j5ird/vendor/bundle/ruby/1.9.1/gems/railties-3.2.9/lib/rails/initializable.rb:30:in `instance_exec'
+       /tmp/build_ax83ee9j5ird/vendor/bundle/ruby/1.9.1/gems/railties-3.2.9/lib/rails/initializable.rb:30:in `run'
+       /tmp/build_ax83ee9j5ird/vendor/bundle/ruby/1.9.1/gems/railties-3.2.9/lib/rails/initializable.rb:55:in `block in run_initializers'
+       /tmp/build_ax83ee9j5ird/vendor/bundle/ruby/1.9.1/gems/railties-3.2.9/lib/rails/initializable.rb:54:in `each'
+       /tmp/build_ax83ee9j5ird/vendor/bundle/ruby/1.9.1/gems/railties-3.2.9/lib/rails/initializable.rb:54:in `run_initializers'
+       /tmp/build_ax83ee9j5ird/vendor/bundle/ruby/1.9.1/gems/railties-3.2.9/lib/rails/application.rb:136:in `initialize!'
+       /tmp/build_ax83ee9j5ird/vendor/bundle/ruby/1.9.1/gems/railties-3.2.9/lib/rails/railtie/configurable.rb:30:in `method_missing'
+       /tmp/build_ax83ee9j5ird/config/environment.rb:5:in `<top (required)>'
+       /tmp/build_ax83ee9j5ird/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.9/lib/active_support/dependencies.rb:251:in `require'
+       /tmp/build_ax83ee9j5ird/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.9/lib/active_support/dependencies.rb:251:in `block in require'
+       /tmp/build_ax83ee9j5ird/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.9/lib/active_support/dependencies.rb:236:in `load_dependency'
+       /tmp/build_ax83ee9j5ird/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.9/lib/active_support/dependencies.rb:251:in `require'
+       /tmp/build_ax83ee9j5ird/vendor/bundle/ruby/1.9.1/gems/railties-3.2.9/lib/rails/application.rb:103:in `require_environment!'
+       /tmp/build_ax83ee9j5ird/vendor/bundle/ruby/1.9.1/gems/railties-3.2.9/lib/rails/application.rb:297:in `block (2 levels) in initialize_tasks'
+       /tmp/build_ax83ee9j5ird/vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.9/lib/sprockets/assets.rake:93:in `block (2 levels) in <top (required)>'
+       /tmp/build_ax83ee9j5ird/vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.9/lib/sprockets/assets.rake:60:in `block (3 levels) in <top (required)>'
+       /tmp/build_ax83ee9j5ird/vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.9/lib/sprockets/assets.rake:23:in `invoke_or_reboot_rake_task'
+       /tmp/build_ax83ee9j5ird/vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.9/lib/sprockets/assets.rake:29:in `block (2 levels) in <top (required)>'
+       Tasks: TOP => environment
+       (See full trace by running task with --trace)
+       Precompiling assets failed, enabling runtime asset compilation
+       Injecting rails31_enable_runtime_asset_compilation
+       Please see this article for troubleshooting help:
+       http://devcenter.heroku.com/articles/rails31_heroku_cedar#troubleshooting
+-----> Rails plugin injection
+       Injecting rails_log_stdout
+       Injecting rails3_serve_static_assets
+-----> Discovering process types
+       Procfile declares types      -> (none)
+       Default types for Ruby/Rails -> console, rake, web, worker
+-----> Compiled slug size: 54.2MB
+-----> Launching... done, v50
+       http://warm-wave-5749.herokuapp.com deployed to Heroku
+
+To git@heroku.com:warm-wave-5749.git
+   128f020..04910ea  master -> master
+]0;hemal@ubuntu: ~/second_apphemal@ubuntu:~/second_app$ heroku logs
+[36m2013-01-29T10:51:14+00:00 app[web.1]:[0m [2013-01-29 10:51:14] ERROR SignalException: SIGTERM
+[36m2013-01-29T10:51:14+00:00 app[web.1]:[0m 	/usr/local/lib/ruby/1.9.1/webrick/server.rb:90:in `select'
+[36m2013-01-29T10:51:16+00:00 heroku[web.1]:[0m Starting process with command `bundle exec rails server -p 12737`
+[36m2013-01-29T10:51:23+00:00 heroku[web.1]:[0m Error R12 (Exit timeout) -> At least one process failed to exit within 10 seconds of SIGTERM
+[36m2013-01-29T10:51:23+00:00 heroku[web.1]:[0m Stopping remaining processes with SIGKILL
+[36m2013-01-29T10:51:24+00:00 app[web.1]:[0m DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/1/4/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/config/environment.rb:5)
+[36m2013-01-29T10:51:24+00:00 app[web.1]:[0m DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/1/4/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/config/environment.rb:5)
+[36m2013-01-29T10:51:24+00:00 app[web.1]:[0m DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them
+ out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/1/4/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/config/environment.rb:5)
+[36m2013-01-29T10:51:25+00:00 heroku[web.1]:[0m Process exited with status 137
+[36m2013-01-29T10:51:30+00:00 app[web.1]:[0m [2013-01-29 10:51:30] INFO  WEBrick 1.3.1
+[36m2013-01-29T10:51:30+00:00 app[web.1]:[0m [2013-01-29 10:51:30] INFO  WEBrick::HTTPServer#start: pid=2 port=12737
+[36m2013-01-29T10:51:30+00:00 app[web.1]:[0m [2013-01-29 10:51:30] INFO  ruby 1.9.2 (2011-07-09) [x86_64-linux]
+[36m2013-01-29T10:51:30+00:00 heroku[web.1]:[0m State changed from starting to up
+[36m2013-01-29T10:54:30+00:00 app[web.1]:[0m Started GET "/events" for 115.249.215.66 at 2013-01-29 10:54:30 +0000
+[36m2013-01-29T10:54:30+00:00 app[web.1]:[0m => Booting WEBrick
+[36m2013-01-29T10:54:30+00:00 app[web.1]:[0m => Rails 3.2.9 application starting in production on http://0.0.0.0:12737
+[36m2013-01-29T10:54:30+00:00 app[web.1]:[0m => Ctrl-C to shutdown server
+[36m2013-01-29T10:54:30+00:00 app[web.1]:[0m => Call with -d to detach
+[36m2013-01-29T10:54:31+00:00 app[web.1]:[0m WARN: tilt autoloading 'sass' in a non thread-safe way; explicit require 'sass' suggested.
+[36m2013-01-29T10:54:32+00:00 app[web.1]:[0m WARN: tilt autoloading 'coffee_script' in a non thread-safe way; explicit require 'coffee_script' suggested.
+2013-01-29T10:54:46+00:0
+[33m0 heroku[router]:[0m at=info method=GET path=/events host=warm-wave-5749.herokuapp.com fwd=115.249.215.66 dyno=web.1 queue=0 wait=0ms connect=2ms service=15805ms status=200 bytes=8315
+[36m2013-01-29T10:54:46+00:00 app[web.1]:[0m Processing by EventsController#index as HTML
+[36m2013-01-29T10:54:46+00:00 app[web.1]:[0m   Rendered events/index.html.erb within layouts/application (305.5ms)
+[36m2013-01-29T10:54:46+00:00 app[web.1]:[0m Compiled events.css  (940ms)  (pid 2)
+[36m2013-01-29T10:54:46+00:00 app[web.1]:[0m Compiled ddaccordion.js  (0ms)  (pid 2)
+[36m2013-01-29T10:54:46+00:00 app[web.1]:[0m Compiled roles.js  (1ms)  (pid 2)
+[36m2013-01-29T10:54:46+00:00 app[web.1]:[0m Completed 200 OK in 15601ms (Views: 15163.4ms | ActiveRecord: 258.7ms)
+[36m2013-01-29T10:54:46+00:00 app[web.1]:[0m Compiled scaffolds.css  (10ms)  (pid 2)
+[36m2013-01-29T10:54:46+00:00 app[web.1]:[0m Compiled sub_categories.js  (1ms)  (pid 2)
+[36m2013-01-29T10:54:46+00:00 app[web.1]:[0m Compiled jquery.js  (2ms)  (pid 2)
+[36m2013-01-29T10:54:46+00:00 app[web.1]:[0m Compiled jquery-latest.js  (0ms)  (pid 2)
+[36m2013-01-29T10:54:46+00:00 app[web.1]:[0m Compiled jquery-1.8.3.min.js  (0ms)  (pid 2)
+[36m2013-01-29T10:54:46+00:00 app[web.1]:[0m Compiled jquery.tablesorter.js  (1ms)  (pid 2)
+[36m2013-01-29T10:54:46+00:00 app[web.1]:[0m Compiled events.js  (141ms)  (pid 2)
+[36m2013-01-29T10:54:46+00:00 app[web.1]:[0m Compiled application.js  (377ms)  (pid 2)
+[36m2013-01-29T10:54:46+00:00 app[web.1]:[0m Compiled jquery_ujs.js  (0ms)  (pid 2)
+[36m2013-01-29T10:54:46+00:00 app[web.1]:[0m Compiled json2.js  (0ms)  (pid 2)
+[36m2013-01-29T10:54:46+00:00 app[web.1]:[0m Compiled application.css  (976ms)  (pid 2)
+[36m2013-01-29T10:54:46+00:00 app[web.1]:[0m Compiled roles.css  (1ms)  (pid 2)
+[36m2013-01-29T10:54:46+00:00 app[web.1]:[0m Compiled sub_categories.css  (3ms)  (pid 2)
+[36m2013-01-29T10:54:47+00:00 app[web.1]:[0m Started GET "/uploads/user/image/1/15062011146.jpg" for 115.249.215.66 at 2013-01-29 10:54:47 +0000
+[36m2013-01-29T10:54:47+00:00 app[web.1]:[0m 
+[36m2013-01-29T10:54:47+00:00 app[web.1]:[0m   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.9/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+[36m2013-01-29T10:54:47+00:00 app[web.1]:[0m ActionController::RoutingError (No route matches [GET] "/uploads/user/image/1/15062011146.jpg"):
+[36m2013-01-29T10:54:47+00:00 app[web.1]:[0m   vendor/bundle/ruby/1.9.1/gems/railties-3.2.9/lib/rails/rack/logger.rb:32:in `call_app'
+[36m2013-01-29T10:54:47+00:00 app[web.1]:[0m   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.9/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+[36m2013-01-29T10:54:47+00:00 app[web.1]:[0m   vendor/bundle/ruby/1.9.1/gems/railties-3.2.9/lib/rails/rack/logger.rb:16:in `block in call'
+[36m2013-01-29T10:54:47+00:00 app[web.1]:[0m   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.9/lib/active_support/tagged_logging.rb:22:in `tagged'
+[36m2013-01-29T10:54:47+00:00 app[web.1]:[0m   vendor/bundle/ruby/1.9.1/gems/railties-3.2.9/lib/rails/rack/logger.rb:16:in `call'
+[36m2013-01-29T10:54:47+00:00 app[web.1]:[0m   vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/methodoverride.rb:21:in `call'
+[36m2013-01-29T10:54:47+00:00 app[web.1]:[0m   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.9/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+[36m2013-01-29T10:54:47+00:00 app[web.1]:[0m   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.9/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+[36m2013-01-29T10:54:47+00:00 app[web.1]:[0m   vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/runtime.rb:17:in `call'
+[36m2013-01-29T10:54:47+00:00 app[web.1]:[0m   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.9/lib/action_dispatch/middleware/static.rb:62:in `call'
+[36m2013-01-29T10:54:47+00:00 app[web.1]:[0m   vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/lock.rb:15:in `call'
+[36m2013-01-29T10:54:47+00:00 app[web.1]:[0m   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:136:in `forward'
+[36m2013-01-29T10:54:47+00:00 app[web.1]:[0m   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:245:in `fetch'
+[36m2013-01-29T10:54:47+00:00 app[web.1]:[0m   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:185:in `lookup'
+[36m2013-01-29T10:54:47+00:00 app[web.1]:[0m   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:66:in `call!'
+[36m2013-01-29T10:54:47+00:00 app[web.1]:[0m   vendor/bundle/ruby/1.9.1/gems/railties-3.2.9/lib/rails/engine.rb:479:in `call'
+[36m2013-01-29T10:54:47+00:00 app[web.1]:[0m   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:51:in `call'
+[36m2013-01-29T10:54:47+00:00 app[web.1]:[0m   vendor/bundle/ruby/1.9.1/gems/railties-3.2.9/lib/rails/application.rb:223:in `call'
+[36m2013-01-29T10:54:47+00:00 app[web.1]:[0m   vendor/bundle/ruby/1.9.1/gems/railties-3.2.9/lib/rails/rack/log_tailer.rb:17:in `call'
+[36m2013-01-29T10:54:47+00:00 app[web.1]:[0m   vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/handler/webrick.rb:59:in `service'
+[36m2013-01-29T10:54:47+00:00 app[web.1]:[0m   /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+[36m2013-01-29T10:54:47+00:00 app[web.1]:[0m   /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+[36m2013-01-29T10:54:47+00:00 app[web.1]:[0m   vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/content_length.rb:14:in `call'
+[36m2013-01-29T10:54:47+00:00 app[web.1]:[0m   /usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+[36m2013-01-29T10:54:47+00:00 app[web.1]:[0m 
+[36m2013-01-29T10:54:47+00:00 app[web.1]:[0m 
+[36m2013-01-29T10:54:47+00:00 app[web.1]:[0m Started GET "/loading2.gif" for 115.249.215.66 at 2013-01-29 10:54:47 +0000
+[36m2013-01-29T10:54:47+00:00 app[web.1]:[0m ActionController::RoutingError (No route matches [GET] "/loading2.gif"):
+[36m2013-01-29T10:54:47+00:00 app[web.1]:[0m 
+[36m2013-01-29T10:54:47+00:00 app[web.1]:[0m   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.9/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+[36m2013-01-29T10:54:47+00:00 app[web.1]:[0m   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.9/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
 [36m
