@@ -1,7 +1,7 @@
 
 
 <html>
- <p class="notice"><%= notice %></p>
+
        <p class="alert"><%= alert %></p>
 <div class="heading">
   <div class="header">
@@ -48,7 +48,7 @@
 <div id="accordion">
   <% user=current_user%>
  <% if user.role? :Administrator%>
- <h3>User Management</h3>
+ <h3>Manage Users</h3>
  <div>
   <p>
     <%= link_to "view Users" , users_path%><br />
@@ -63,7 +63,7 @@
   </p>
 </div>
 <%end%>
-  <h3>profile Management</h3>
+  <h3>Manage Profile</h3>
   <div>
     <p>
     <%= link_to "Edit profile" , edit_user_registration_path%><br />
@@ -78,7 +78,7 @@
     <%= link_to "List Event" ,events_path%>
     </p>
   </div>
-  <h3>MAnage Category</h3>
+  <h3>Manage Category</h3>
   <div>
     <p>
     <%= link_to "Create Category", new_sub_category_path%></br>
@@ -95,7 +95,7 @@
 </html>
 
 
-<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css" />
+
   <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
   <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
  

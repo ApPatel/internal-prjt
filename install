@@ -3496,4 +3496,178 @@ To git@heroku.com:warm-wave-5749.git
 #	deleted:    app/views/events/other_sub_category.js.erb
 #	modified:   install
 #	deleted:    public/uploads/user/image/3/texture-09.jpg
-#	deleted:    public/uploads/user/image/4/
+#	deleted:    public/uploads/user/image/4/hemali.jpg
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;hemal@ubuntu: ~/second_apphemal@ubuntu:~/second_app$ git rm app/mailers/user_mailer.rb
+rm 'app/mailers/user_mailer.rb'
+]0;hemal@ubuntu: ~/second_apphemal@ubuntu:~/second_app$ git rm app/mailers/user_mailer.rbstatus[K
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	deleted:    app/mailers/user_mailer.rb
+#
+# Changes not staged for commit:
+#   (use "git add/rm <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	deleted:    app/assets/images/asc.gif
+#	deleted:    app/assets/images/desc.gif
+#	deleted:    app/assets/images/edit.png
+#	deleted:    app/assets/images/main.jpeg
+#	deleted:    app/assets/images/rails.png
+#	deleted:    app/assets/images/silvergradient.gif
+#	deleted:    app/assets/images/silvergradientover.gif
+#	deleted:    app/assets/images/texture.jpg
+#	deleted:    app/views/events/ _other_sub_category.html.erb
+#	deleted:    app/views/events/other_sub_category.js.erb
+#	modified:   install
+#	deleted:    public/uploads/user/image/3/texture-09.jpg
+#	deleted:    public/uploads/user/image/4/hemali.jpg
+#
+]0;hemal@ubuntu: ~/second_apphemal@ubuntu:~/second_app$ git add .
+]0;hemal@ubuntu: ~/second_apphemal@ubuntu:~/second_app$ git commit -m ""c"s"s" "c"h"a"n"g"e"s"
+[master b3b97a0] css changes
+ 2 files changed, 305 insertions(+), 12 deletions(-)
+ delete mode 100644 app/mailers/user_mailer.rb
+]0;hemal@ubuntu: ~/second_apphemal@ubuntu:~/second_app$ git push
+hemaliUsername for 'https://github.com': .gjain@tcs.com
+Password for 'https://hemali.gjain@tcs.com@github.com': 
+To https://github.com/hemalijain/internal-prjt.git
+   ed28c96..b3b97a0  master -> master
+]0;hemal@ubuntu: ~/second_apphemal@ubuntu:~/second_app$ git push heroku master
+Counting objects: 7, done.
+Compressing objects:  25% (1/4)   Compressing objects:  50% (2/4)   Compressing objects:  75% (3/4)   Compressing objects: 100% (4/4)   Compressing objects: 100% (4/4), done.
+Writing objects:  25% (1/4)   Writing objects:  50% (2/4)   Writing objects:  75% (3/4)   Writing objects: 100% (4/4)   Writing objects: 100% (4/4), 2.32 KiB, done.
+Total 4 (delta 3), reused 0 (delta 0)
+-----> Ruby/Rails app detected
+-----> Installing dependencies using Bundler version 1.3.0.pre.5
+       Running: bundle install --without development:test --path vendor/bundle --binstubs vendor/bundle/bin --deployment
+       Using rake (10.0.3)
+       Using i18n (0.6.1)
+       Using multi_json (1.5.0)
+       Using activesupport (3.2.9)
+       Using builder (3.0.4)
+       Using activemodel (3.2.9)
+       Using erubis (2.7.0)
+       Using journey (1.0.4)
+       Using rack (1.4.1)
+       Using rack-cache (1.2)
+       Using rack-test (0.6.2)
+       Using hike (1.2.1)
+       Using tilt (1.3.3)
+       Using sprockets (2.2.2)
+       Using actionpack (3.2.9)
+       Using mime-types (1.19)
+       Using polyglot (0.3.3)
+       Using treetop (1.4.12)
+       Using mail (2.4.4)
+       Using actionmailer (3.2.9)
+       Using arel (3.0.2)
+       Using tzinfo (0.3.35)
+       Using activerecord (3.2.9)
+       Using activeresource (3.2.9)
+       Using bcrypt-ruby (3.0.1)
+       Using cancan (1.6.8)
+       Using carrierwave (0.8.0)
+       Using coffee-script-source (1.4.0)
+       Using execjs (1.4.0)
+       Using coffee-script (2.2.0)
+       Using rack-ssl (1.3.2)
+       Using json (1.7.5)
+       Using rdoc (3.12)
+       Using thor (0.16.0)
+       Using railties (3.2.9)
+       Using coffee-rails (3.2.2)
+       Using orm_adapter (0.4.0)
+       Using warden (1.2.1)
+       Using devise (2.1.2)
+       Using factory_girl (4.1.0)
+       Using factory_girl_rails (4.1.0)
+       Using jquery-rails (2.1.4)
+       Using kaminari (0.14.1)
+       Using libv8 (3.11.8.4)
+       Using mysql2 (0.3.11)
+       Using pg (0.14.1)
+       Using bundler (1.3.0.pre.5)
+       Using rails (3.2.9)
+       Using ref (1.0.2)
+       Using sass (3.2.3)
+       Using sass-rails (3.2.5)
+       Using therubyracer (0.11.0)
+       Using uglifier (1.3.0)
+       Your bundle is complete! It was installed into ./vendor/bundle
+       Cleaning up the bundler cache.
+       Would have removed mail_view (1.0.3)
+       Would have removed calendar_date_select (8e7ec79435a6)
+-----> Writing config/database.yml to read from DATABASE_URL
+-----> Preparing app for Rails asset pipeline
+       Running: rake assets:precompile
+       rake aborted!
+       could not connect to server: Connection refused
+       Is the server running on host "127.0.0.1" and accepting
+       TCP/IP connections on port 5432?
+       /tmp/build_1ga9ckxus49h2/vendor/bundle/ruby/1.9.1/gems/activerecord-3.2.9/lib/active_record/connection_adapters/postgresql_adapter.rb:1208:in `initialize'
+       /tmp/build_1ga9ckxus49h2/vendor/bundle/ruby/1.9.1/gems/activerecord-3.2.9/lib/active_record/connection_adapters/postgresql_adapter.rb:1208:in `new'
+       /tmp/build_1ga9ckxus49h2/vendor/bundle/ruby/1.9.1/gems/activerecord-3.2.9/lib/active_record/connection_adapters/postgresql_adapter.rb:1208:in `connect'
+       /tmp/build_1ga9ckxus49h2/vendor/bundle/ruby/1.9.1/gems/activerecord-3.2.9/lib/active_record/connection_adapters/postgresql_adapter.rb:326:in `initialize'
+       /tmp/build_1ga9ckxus49h2/vendor/bundle/ruby/1.9.1/gems/activerecord-3.2.9/lib/active_record/connection_adapters/postgresql_adapter.rb:28:in `new'
+       /tmp/build_1ga9ckxus49h2/vendor/bundle/ruby/1.9.1/gems/activerecord-3.2.9/lib/active_record/connection_adapters/postgresql_adapter.rb:28:in `postgresql_connection'
+       /tmp/build_1ga9ckxus49h2/vendor/bundle/ruby/1.9.1/gems/activerecord-3.2.9/lib/active_record/connection_adapters/abstract/connection_pool.rb:315:in `new_connection'
+       /tmp/build_1ga9ckxus49h2/vendor/bundle/ruby/1.9.1/gems/activerecord-3.2.9/lib/active_record/connection_adapters/abstract/connection_pool.rb:325:in `checkout_new_connection'
+       /tmp/build_1ga9ckxus49h2/vendor/bundle/ruby/1.9.1/gems/activerecord-3.2.9/lib/active_record/connection_adapters/abstract/connection_pool.rb:247:in `block (2 levels) in checkout'
+       /tmp/build_1ga9ckxus49h2/vendor/bundle/ruby/1.9.1/gems/activerecord-3.2.9/lib/active_record/connection_adapters/abstract/connection_pool.rb:242:in `loop'
+       /tmp/build_1ga9ckxus49h2/vendor/bundle/ruby/1.9.1/gems/activerecord-3.2.9/lib/active_record/connection_adapters/abstract/connection_pool.rb:242:in `block in checkout'
+       /tmp/build_1ga9ckxus49h2/vendor/bundle/ruby/1.9.1/gems/activerecord-3.2.9/lib/active_record/connection_adapters/abstract/connection_pool.rb:239:in `checkout'
+       /tmp/build_1ga9ckxus49h2/vendor/bundle/ruby/1.9.1/gems/activerecord-3.2.9/lib/active_record/connection_adapters/abstract/connection_pool.rb:102:in `block in connection'
+       /tmp/build_1ga9ckxus49h2/vendor/bundle/ruby/1.9.1/gems/activerecord-3.2.9/lib/active_record/connection_adapters/abstract/connection_pool.rb:101:in `connection'
+       /tmp/build_1ga9ckxus49h2/vendor/bundle/ruby/1.9.1/gems/activerecord-3.2.9/lib/active_record/connection_adapters/abstract/connection_pool.rb:410:in `retrieve_connection'
+       /tmp/build_1ga9ckxus49h2/vendor/bundle/ruby/1.9.1/gems/activerecord-3.2.9/lib/active_record/connection_adapters/abstract/connection_specification.rb:171:in `retrieve_connection'
+       /tmp/build_1ga9ckxus49h2/vendor/bundle/ruby/1.9.1/gems/activerecord-3.2.9/lib/active_record/connection_adapters/abstract/connection_specification.rb:145:in `connection'
+       /tmp/build_1ga9ckxus49h2/vendor/bundle/ruby/1.9.1/gems/activerecord-3.2.9/lib/active_record/model_schema.rb:308:in `clear_cache!'
+       /tmp/build_1ga9ckxus49h2/vendor/bundle/ruby/1.9.1/gems/activerecord-3.2.9/lib/active_record/railtie.rb:97:in `block (2 levels) in <class:Railtie>'
+       /tmp/build_1ga9ckxus49h2/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:418:in `_run__876311508127018766__prepare__3016815071454625702__callbacks'
+       /tmp/build_1ga9ckxus49h2/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:405:in `__run_callback'
+       /tmp/build_1ga9ckxus49h2/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:385:in `_run_prepare_callbacks'
+       /tmp/build_1ga9ckxus49h2/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:81:in `run_callbacks'
+       /tmp/build_1ga9ckxus49h2/vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.9/lib/action_dispatch/middleware/reloader.rb:74:in `prepare!'
+       /tmp/build_1ga9ckxus49h2/vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.9/lib/action_dispatch/middleware/reloader.rb:48:in `prepare!'
+       /tmp/build_1ga9ckxus49h2/vendor/bundle/ruby/1.9.1/gems/railties-3.2.9/lib/rails/application/finisher.rb:47:in `block in <module:Finisher>'
+       /tmp/build_1ga9ckxus49h2/vendor/bundle/ruby/1.9.1/gems/railties-3.2.9/lib/rails/initializable.rb:30:in `instance_exec'
+       /tmp/build_1ga9ckxus49h2/vendor/bundle/ruby/1.9.1/gems/railties-3.2.9/lib/rails/initializable.rb:30:in `run'
+       /tmp/build_1ga9ckxus49h2/vendor/bundle/ruby/1.9.1/gems/railties-3.2.9/lib/rails/initializable.rb:55:in `block in run_initializers'
+       /tmp/build_1ga9ckxus49h2/vendor/bundle/ruby/1.9.1/gems/railties-3.2.9/lib/rails/initializable.rb:54:in `each'
+       /tmp/build_1ga9ckxus49h2/vendor/bundle/ruby/1.9.1/gems/railties-3.2.9/lib/rails/initializable.rb:54:in `run_initializers'
+       /tmp/build_1ga9ckxus49h2/vendor/bundle/ruby/1.9.1/gems/railties-3.2.9/lib/rails/application.rb:136:in `initialize!'
+       /tmp/build_1ga9ckxus49h2/vendor/bundle/ruby/1.9.1/gems/railties-3.2.9/lib/rails/railtie/configurable.rb:30:in `method_missing'
+       /tmp/build_1ga9ckxus49h2/config/environment.rb:5:in `<top (required)>'
+       /tmp/build_1ga9ckxus49h2/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.9/lib/active_support/dependencies.rb:251:in `require'
+       /tmp/build_1ga9ckxus49h2/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.9/lib/active_support/dependencies.rb:251:in `block in require'
+       /tmp/build_1ga9ckxus49h2/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.9/lib/active_support/dependencies.rb:236:in `load_dependency'
+       /tmp/build_1ga9ckxus49h2/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.9/lib/active_support/dependencies.rb:251:in `require'
+       /tmp/build_1ga9ckxus49h2/vendor/bundle/ruby/1.9.1/gems/railties-3.2.9/lib/rails/application.rb:103:in `require_environment!'
+       /tmp/build_1ga9ckxus49h2/vendor/bundle/ruby/1.9.1/gems/railties-3.2.9/lib/rails/application.rb:297:in `block (2 levels) in initialize_tasks'
+       /tmp/build_1ga9ckxus49h2/vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.9/lib/sprockets/assets.rake:93:in `block (2 levels) in <top (required)>'
+       /tmp/build_1ga9ckxus49h2/vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.9/lib/sprockets/assets.rake:60:in `block (3 levels) in <top (required)>'
+       /tmp/build_1ga9ckxus49h2/vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.9/lib/sprockets/assets.rake:23:in `invoke_or_reboot_rake_task'
+       /tmp/build_1ga9ckxus49h2/vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.9/lib/sprockets/assets.rake:29:in `block (2 levels) in <top (required)>'
+       Tasks: TOP => environment
+       (See full trace by running task with --trace)
+       Precompiling assets failed, enabling runtime asset compilation
+       Injecting rails31_enable_runtime_asset_compilation
+       Please see this article for troubleshooting help:
+       http://devcenter.heroku.com/articles/rails31_heroku_cedar#troubleshooting
+-----> Rails plugin injection
+       Injecting rails_log_stdout
+       Injecting rails3_serve_static_assets
+-----> Discovering process types
+       Procfile declares types      -> (none)
+       Default types for Ruby/Rails -> console, rake, web, worker
+-----> Compiled slug size: 54.2MB
+-----> Launching... done, v52
+       http://warm-wave-5749.herokuapp.com deployed to Heroku
+
+To git@heroku.com:warm-wave-5749.git
+   ed28c96..b3b97a0  master -> master
+]0;hemal@ubuntu: ~/second_a

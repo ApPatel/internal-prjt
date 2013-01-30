@@ -86,8 +86,7 @@ background-color: #D3E2FF;
  {
  	   color: #75A3FF;
      text-align:center;
-     margin-top: 10px;
-     float:left;
+     
 
 
  }
@@ -158,7 +157,7 @@ background-color: #D3E2FF;
     margin-top: 5px;
     padding-top: 32px;
     text-align: center;
-    width: 100%
+    width: 100%;
     -moz-border-radius: 20px;
     -webkit-border-radius: 20px;
     -khtml-border-radius: 20px;
@@ -183,7 +182,9 @@ text-align: right
 }
 #user_nav
 {
-  margin-left: 675px;
+  float: right;
+    padding-right: 20px;
+    
 }
 .tablestyling ,.tablesorter
 {
@@ -438,3 +439,261 @@ li.active
 {
 	background: none repeat scroll 0 0 #D3E2FF;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*! jQuery UI - v1.10.0 - 2013-01-17
+* http://jqueryui.com
+* Includes: jquery.ui.core.css, jquery.ui.accordion.css, jquery.ui.autocomplete.css, jquery.ui.button.css, jquery.ui.datepicker.css, jquery.ui.dialog.css, jquery.ui.menu.css, jquery.ui.progressbar.css, jquery.ui.resizable.css, jquery.ui.selectable.css, jquery.ui.slider.css, jquery.ui.spinner.css, jquery.ui.tabs.css, jquery.ui.tooltip.css, jquery.ui.theme.css
+* Copyright 2013 jQuery Foundation and other contributors; Licensed MIT */
+
+/* Layout helpers
+----------------------------------*/
+.ui-helper-hidden {
+    display: none;
+}
+.ui-helper-hidden-accessible {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+.ui-helper-reset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    line-height: 1.3;
+    text-decoration: none;
+    font-size: 100%;
+    list-style: none;
+}
+.ui-helper-clearfix:before,
+.ui-helper-clearfix:after {
+    content: "";
+    display: table;
+}
+.ui-helper-clearfix:after {
+    clear: both;
+}
+.ui-helper-clearfix {
+    min-height: 0; /* support: IE7 */
+}
+.ui-helper-zfix {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    opacity: 0;
+    filter:Alpha(Opacity=0);
+}
+
+.ui-front {
+    z-index: 100;
+}
+
+
+/* Interaction Cues
+----------------------------------*/
+.ui-state-disabled {
+    cursor: default !important;
+}
+
+
+/* Icons
+----------------------------------*/
+
+/* states and images */
+.ui-icon {
+    display: block;
+    text-indent: -99999px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+
+
+/* Misc visuals
+----------------------------------*/
+
+/* Overlays */
+.ui-widget-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.ui-accordion .ui-accordion-header {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    margin-top: 2px;
+    padding: .5em .5em .5em .7em;
+    min-height: 0; /* support: IE7 */
+}
+.ui-accordion .ui-accordion-icons {
+    padding-left: 2.2em;
+     background-color: #D3E2FF;
+     border-radius: 10px;
+}
+.ui-accordion .ui-accordion-noicons {
+    padding-left: .7em;
+}
+.ui-accordion .ui-accordion-icons .ui-accordion-icons {
+    padding-left: 2.2em;
+}
+.ui-accordion .ui-accordion-header .ui-accordion-header-icon {
+    position: absolute;
+    left: .5em;
+    top: 50%;
+    margin-top: -8px;
+}
+.ui-accordion .ui-accordion-content {
+    padding: 1em 2.2em;
+    border-top: 0;
+    overflow: auto;
+    border-radius: 10px;
+}
+
+
+/* Component containers
+----------------------------------*/
+.ui-widget {
+    font-family: Verdana,Arial,sans-serif/*{ffDefault}*/;
+    font-size: 1.1em/*{fsDefault}*/;
+}
+.ui-widget .ui-widget {
+    font-size: 1em;
+}
+.ui-widget input,
+.ui-widget select,
+.ui-widget textarea,
+.ui-widget button {
+    font-family: Verdana,Arial,sans-serif/*{ffDefault}*/;
+    font-size: 1em;
+}
+.ui-widget-content {
+    border: 1px solid #aaaaaa/*{borderColorContent}*/;
+    background: #ffffff/*{bgColorContent}*/ url(images/ui-bg_flat_75_ffffff_40x100.png)/*{bgImgUrlContent}*/ 50%/*{bgContentXPos}*/ 50%/*{bgContentYPos}*/ repeat-x/*{bgContentRepeat}*/;
+    color: #222222/*{fcContent}*/;
+}
+.ui-widget-content a {
+    color: #222222/*{fcContent}*/;
+}
+.ui-widget-header {
+    border: 1px solid #aaaaaa/*{borderColorHeader}*/;
+    background: #cccccc/*{bgColorHeader}*/ url(images/ui-bg_highlight-soft_75_cccccc_1x100.png)/*{bgImgUrlHeader}*/ 50%/*{bgHeaderXPos}*/ 50%/*{bgHeaderYPos}*/ repeat-x/*{bgHeaderRepeat}*/;
+    color: #222222/*{fcHeader}*/;
+    font-weight: bold;
+}
+.ui-widget-header a {
+    color: #222222/*{fcHeader}*/;
+}
+
+/* Interaction states
+----------------------------------*/
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+    border: 1px solid #d3d3d3/*{borderColorDefault}*/;
+    background: #e6e6e6/*{bgColorDefault}*/ url(images/ui-bg_glass_75_e6e6e6_1x400.png)/*{bgImgUrlDefault}*/ 50%/*{bgDefaultXPos}*/ 50%/*{bgDefaultYPos}*/ repeat-x/*{bgDefaultRepeat}*/;
+    font-weight: normal/*{fwDefault}*/;
+    color: #555555/*{fcDefault}*/;
+}
+.ui-state-default a,
+.ui-state-default a:link,
+.ui-state-default a:visited {
+    color: #555555/*{fcDefault}*/;
+    text-decoration: none;
+}
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus {
+    border: 1px solid #999999/*{borderColorHover}*/;
+    background: #dadada/*{bgColorHover}*/ url(images/ui-bg_glass_75_dadada_1x400.png)/*{bgImgUrlHover}*/ 50%/*{bgHoverXPos}*/ 50%/*{bgHoverYPos}*/ repeat-x/*{bgHoverRepeat}*/;
+    font-weight: normal/*{fwDefault}*/;
+    color: #212121/*{fcHover}*/;
+}
+.ui-state-hover a,
+.ui-state-hover a:hover,
+.ui-state-hover a:link,
+.ui-state-hover a:visited {
+    color: #212121/*{fcHover}*/;
+    text-decoration: none;
+}
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active {
+    border: 1px solid #aaaaaa/*{borderColorActive}*/;
+    background: #ffffff/*{bgColorActive}*/ url(images/ui-bg_glass_65_ffffff_1x400.png)/*{bgImgUrlActive}*/ 50%/*{bgActiveXPos}*/ 50%/*{bgActiveYPos}*/ repeat-x/*{bgActiveRepeat}*/;
+    font-weight: normal/*{fwDefault}*/;
+    color: #212121/*{fcActive}*/;
+}
+.ui-state-active a,
+.ui-state-active a:link,
+.ui-state-active a:visited {
+    color: #212121/*{fcActive}*/;
+    text-decoration: none;
+}
+
+/* Interaction Cues
+----------------------------------*/
+
+/* Icons
+----------------------------------*/
+
+/* states and images */
+
+/* positioning */
+
+/* Misc visuals
+----------------------------------*/
+
+/* Corner radius */
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-left,
+.ui-corner-tl {
+    border-top-left-radius: 4px/*{cornerRadius}*/;
+}
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-right,
+.ui-corner-tr {
+    border-top-right-radius: 4px/*{cornerRadius}*/;
+}
+.ui-corner-all,
+.ui-corner-bottom,
+.ui-corner-left,
+.ui-corner-bl {
+    border-bottom-left-radius: 4px/*{cornerRadius}*/;
+}
+.ui-corner-all,
+.ui-corner-bottom,
+.ui-corner-right,
+.ui-corner-br {
+    border-bottom-right-radius: 4px/*{cornerRadius}*/;
+}
+
