@@ -78,7 +78,7 @@ background-color: #D3E2FF;
  }
  .avatar
  {
-    margin-left: 1107px;
+    margin-left: 1133px;
     
     margin-top: -60px;
  }
@@ -146,9 +146,8 @@ background-color: #D3E2FF;
  }
  .searchbox
  {
- 	 float: right;
-    margin-left: 18px;
-    margin-right: 339px;
+ 	margin-right: 416px;
+    float: right;
  }
 .header
 {
@@ -182,7 +181,9 @@ text-align: right
 }
 #user_nav
 {
-  float: right;
+ float: right;
+    margin-right: 93px;
+    margin-top: -20px;
     padding-right: 20px;
     
 }
