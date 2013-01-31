@@ -92,11 +92,11 @@ background-color: #D3E2FF;
  }
  .style_image_view
  {
-         border-radius: 10px 10px 10px 10px;
-   
-    margin-left: -3px;
-    margin-top: 0;
-    width: 66px
+          border-radius: 10px 10px 10px 10px;
+    height: 77px;
+    margin-left: 12px;
+    margin-top: -20px;
+    width: 66px;
  }
  .style_image
  {
@@ -183,7 +183,7 @@ text-align: right
 #user_nav
 {
  float: right;
-    margin-right: 93px;
+    margin-right: 73px;
     margin-top: -20px;
     padding-right: 20px;
     
