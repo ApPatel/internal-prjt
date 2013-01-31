@@ -13,7 +13,7 @@
 <% @sub_categories.each do |sub_category| %>
   <tr>
     <td id="category"><%= link_to "#{sub_category.name}" ,list_events_for_category_sub_category_path(sub_category) %></td>
-   <td id="actioncolumn"> <%= link_to(image_tag("editIcon.png"), edit_sub_category_path(sub_category)) %></td>
+   <td id="actioncolumn"> <%= link_to(image_tag("editIcon.png",:height=>20,:width=>20), edit_sub_category_path(sub_category)) %></td>
     <td id="actioncolumn"><%= link_to(image_tag("delete.png"),sub_category, method: :delete, data: { confirm: 'Are you sure?' }) %></td>
   </tr>
 <% end %>

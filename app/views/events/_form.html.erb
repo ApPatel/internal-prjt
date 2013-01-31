@@ -29,7 +29,7 @@
   </div>
  <div class="field">
      <tr><td><%= f.label :'event date' %></td>
- <td><%= date_select('event','event_date')%></td></tr>
+<td><%= f.text_field :event_date, :id=>'datepicker'%></td></tr>
 </div>
 
  <div id="deleteattachment">
@@ -131,5 +131,13 @@ function DjCheckMaxlength(oInObj)
           oInObj.value = oInObj.value.substring(0, iMaxLen);
       }
 }
+ $(function() {
+     $( "#datepicker" ).datepicker(      
+     {
+      changeMonth: true,
+      changeYear: true,
+      dateFormat: "yy-mm-dd"   
+    });
+  });
        
 </script>

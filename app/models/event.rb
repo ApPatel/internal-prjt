@@ -4,10 +4,10 @@ class Event < ActiveRecord::Base
    validates :description, :presence => true
    validates :name, :presence => true
    validates :event_date, :presence => true
-   
-   validate :datecheck, :on => :update
+   validate :datecheck, :on => :create,:on=>:update
+   validates :sub_category_id, :presence => true
   
-   validates_format_of :attachment_file, :with => %r{\.(docx|doc|rb|pdf|txt)$}i, :unless=> "attachment_file.nil?"
+   validates_format_of :attachment_file, :with => %r{\.(docx|doc|xls|pdf|txt)$}i, :unless=> "attachment_file.nil?"
   belongs_to :sub_category 
 def datecheck
 	currentDate=Date.today

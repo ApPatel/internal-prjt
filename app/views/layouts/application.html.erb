@@ -31,9 +31,9 @@
 <div class="avatar">
   <% if user_signed_in? %>
    <% if current_user.image_url %>
-      <%=image_tag current_user.image_url.to_s ,:width=>'50' , :height=>'70',:class => "style_image"%>
+      <%=image_tag current_user.image_url.to_s ,:width=>'50' , :height=>'60',:class => "style_image"%>
       <% else %>
-       <%=image_tag "avatar.png",:width=>'50', :height=>'70', :class=>"style_image"%>
+       <%=image_tag "avatar.png",:width=>'50', :height=>'60', :class=>"style_image"%>
       <% end %>
       <% end%>
     </div>
