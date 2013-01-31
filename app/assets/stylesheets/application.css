@@ -113,7 +113,7 @@ background-color: #D3E2FF;
    border-top-right-radius:20px;
    border-bottom-right-radius:20px; 
      background-color: #D3E2FF;
-   height: 50px;
+   height: 60px;
    width:50%;
    text-align: center;
  }
@@ -126,12 +126,13 @@ background-color: #D3E2FF;
  {
  	 border-radius:20px;
  	   background-color: #D3E2FF;
- 	 
+ 	 margin-top: 27px;
     text-align: center;
     width: 860px;
     font-size:50px;
     margin-top: 50px;
     padding-top: 1px;
+    float: left;
    
  }
  .fontstyling
