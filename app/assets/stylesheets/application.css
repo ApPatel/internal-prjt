@@ -186,7 +186,7 @@ text-align: right
 color: yellowgreen;
     font-family: 'Times New Roman';
     font-size: 34px;
-    
+    margin-right: 670px;
     font-weight: bold;
 
 }
@@ -395,6 +395,30 @@ color: yellowgreen;
     -khtml-border-radius: 20px;
     border-radius: 20px;
     float:left;
+    
+}
+.signin
+{
+    text-align: left;
+}
+.wrapper2
+{
+    background-color: #D3E2FF;
+    border-style: groove;
+    border-width: 5px;
+    
+   
+   border-color: #75A3FF;
+  
+    margin-left: 1px;
+    margin-top: 20px;
+    width: 67%;
+    
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -khtml-border-radius: 20px;
+    border-radius: 20px;
+    text-align: center;
     
 }
 .rightdiv

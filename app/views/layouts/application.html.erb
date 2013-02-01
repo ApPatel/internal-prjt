@@ -5,7 +5,7 @@
        <p class="alert"><%= alert %></p>
 <div class="heading">
   <div class="header">
-	<p><font class="appname">ODC EVENT MANAGEMENT</font></p>
+	<p><font class="appname" >ODC EVENT MANAGEMENT</font></p>
     <head>
   <title>SecondApp</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
@@ -24,8 +24,7 @@
      <% end %>
     <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
 
-  <% else %>
-    <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
+ 
   <% end %>
 </div>
 <div class="avatar">
