@@ -65,6 +65,14 @@
      margin-left: 158px;
      width: 50%;
 }
+.leftcontainer
+{
+    color:  #fe4200;
+     font-family: arial;
+     float: left;
+     margin-left: 158px;
+     width: 50%;
+}
 .formheading
 {
     padding-bottom: 10px;
@@ -434,9 +442,9 @@ text-align: right
 .pagination
 {
 	  float: left;
-   margin-left: -328px;
-    margin-right: 182px;
-    padding-top: 303px;
+  margin-left: -338px;
+  
+    padding-top: 218px;
    }
 ul.pagination
 {
