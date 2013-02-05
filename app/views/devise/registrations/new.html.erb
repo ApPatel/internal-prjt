@@ -1,22 +1,23 @@
-
-<div class="listheading"><div class="fontstyling"><h2>Sign up</h2></div></div>
-<div class="wrapper2">
+<div id="login" class="loginform">
+  <div class="signinname">Sign up</div>
+</div>
+  <div class="loginform1">
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
    
-  <table><tr><td><%= f.label :email %></td>
-  <td><%= f.email_field :email %></td></tr>
+  <table><tr><td class="labelstyle"><%= f.label :email %></td>
+  <td><%= f.email_field :email ,:size=>20%></td></tr>
 
-  <tr><td><%= f.label :password %></td>
-  <td><%= f.password_field :password %></td></tr>
+  <tr><td class="labelstyle"><%= f.label :password %></td>
+  <td><%= f.password_field :password,:size=>20 %></td></tr>
 
-  <tr><td><%= f.label :password_confirmation %></td>
-  <td><%= f.password_field :password_confirmation %></td></tr>
-  <tr><td><%= f.label :'Profile picture'%>
-  	<td><%= f.file_field :image %></td><tr></table>
-  <div class="signin"><%= f.submit "Sign up" %><br /><br />
+  <tr><td class="labelstyle"><%= f.label :'confirm password' %></td>
+  <td><%= f.password_field :password_confirmation ,:size=>20%></td></tr>
+
+ <tr><td></td><td><%= f.submit "Sign up", :class=>"button" %>
+ </td></tr></table>
 <% end %>
 
-<%= render "devise/shared/links" %>
-</div>
-</div>
+
+
+<font class="signup">Have an account <%= link_to "Sign in", new_session_path(resource_name) ,:class=>"labelstyle"%> now </font>

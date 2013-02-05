@@ -1,4 +1,5 @@
-<%= form_for(@event) do |f| %>
+ <div class="scalfoldloginform">
+  <%= form_for @event, :html => { :id => "form" } do |f| %>
   <% if @event.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
@@ -10,25 +11,24 @@
       </ul>
     </div>
   <% end %>
-<div class="wrapper">
   <table>
     <tr>
   <div class="field">
-    <td><%= f.label :'Event name' %></td>
+    <td  class="labelstyle"><%= f.label :'Event name' %></td>
     <td><%= f.text_field :name %></td>
    </tr>
   </div>
   <div class="field">
-   <tr><td> <%= f.label :'Event agenda(500 characters)' %></td>
+   <tr><td  class="labelstyle"> <%= f.label :'Event agenda(500 characters)' %></td>
     <td><%= f.text_area :agenda ,:cols => "50", :rows => "5",:maxlength=>"500",:onkeyup=>"return DjCheckMaxlength(this)" %></td>
   </tr>
   </div>
   <div class="field">
-    <tr><td><%= f.label :'description(200 characters)' %></td>
+    <tr><td  class="labelstyle"><%= f.label :'description(200 characters)' %></td>
     <td><%= f.text_area :description,:cols => "50", :rows => "5",:maxlength=>"200",:onkeyup=>"return DjCheckMaxlength(this)" %></td></tr>
   </div>
  <div class="field">
-     <tr><td><%= f.label :'event date' %></td>
+     <tr><td class="labelstyle"><%= f.label :'event date' %></td>
 <td><%= f.text_field :event_date, :id=>'datepicker'%></td></tr>
 </div>
 
@@ -42,32 +42,33 @@
                            %></td></tr>
   </div>
   <div id="newupload_file" style="display:none">
-     <tr><td><%= f.label :attachment_file %></td>
+     <tr><td class="labelstyle"><%= f.label :attachment_file %></td>
      <td><%= f.file_field :attachment_file%></td></tr>
   </div>
 
   <%else %> 
   <div class="field">
-    <tr><td><%= f.label :attachment_file %></td>
+    <tr><td class="labelstyle"><%= f.label :attachment_file %></td>
    <td><%= f.file_field :attachment_file%></td></tr>
   </div>
   <% end%>
  </div>
   <div class="field" id ="sc">
-    <tr><td><%= f.label :'Category' %></td>
+    <tr><td class="labelstyle"><%= f.label :'Category' %></td>
     <%@sub_categories=SubCategory.all%>
     
 
  <td><%=  f.select :sub_category_id, options_for_select(@sub_categories.collect {|sub_category| [sub_category.name , sub_category.id]},@event.sub_category_id), {:include_blank => 'Please Select'}%></td></tr>
   </div>
-   <tr><td><%= link_to "Create New Category for this Event", events_other_sub_category_path ,:id => 'subNewCat'%></td>
+   <tr><td><%= link_to "Create New Category for this Event", events_other_sub_category_path ,:id => 'subNewCat'%>
    <td><div id="other"></div></td></tr>
 
-</table>
+
   
-  <div class="actions">
+  <tr><td></td><td><div class="actions">
     <%= f.submit %>
-  </div>
+  </div></td></tr>
+  </table>
 </div>
 <% end %>
 

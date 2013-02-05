@@ -1,4 +1,5 @@
-<%= form_for(@role) do |f| %>
+ <div class="scalfoldloginform">
+<%= form_for @role , :html => { :id => "form" } do |f| %>
   <% if @role.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@role.errors.count, "error") %> prohibited this role from being saved:</h2>
@@ -10,13 +11,18 @@
       </ul>
     </div>
   <% end %>
- <div class="wrapper">
+<table>
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+   <tr><td class="labelstyle"> <%= f.label :name %></td>
+    <td><%= f.text_field :name %></td></tr>
   </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-   </div>
+ <tr><td></td><td> <div class="actions">
+
+    <%= f.submit%>
+
+
+
+  </div></td></tr></table>
+  
 <% end %>
+ </div>

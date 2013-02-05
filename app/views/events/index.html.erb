@@ -1,19 +1,20 @@
 
-<div class="listheading"><div class="fontstyling">
+<div class="fontstyling">
 <h1>Events List</h1>
-  </div></div>
+  </div>
 <% if @events.empty? %>
 <div class="noevents"><h5>No events</h5></div>
 <% else%>
+<div class="tableborder">
 <table class="tablesorter" id="my_table">
  <thead>
   <tr>
     <th>Event</th>
-    <th>Description</th>
+
     <th>Event date</th>
     
-    <th>Event Category  <th></th>
-    <th></th></th>
+    <th>Event Category  </th><th>Edit</th>
+    <th>Delete</th>
    
    
   </tr>
@@ -24,7 +25,6 @@
   <tr>
    <td><%= link_to "#{event.name}", event %></td>
 
-    <td><%= event.description %></td>
     
       <td><%= event.event_date %></td>
     <%  @sub_category = SubCategory.find(event.sub_category_id)%>
@@ -35,6 +35,7 @@
 <% end %>
 </tbody>
 </table>
+</div>
 <% end %>
 <%= paginate @events %>
 <script type="text/javascript">

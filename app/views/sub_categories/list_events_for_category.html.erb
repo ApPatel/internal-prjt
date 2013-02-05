@@ -1,29 +1,32 @@
 
 <% @sub_category_name=@sub_category.name%>
-   <div id="listevents">
-<div class="searchbox">
- <div class="field">
-    <%= label_tag :'Search' %><br />
-    <%= text_field_tag :search %>
-  </div>
-   <input type="button" name="Go"  value="Go" onclick="search(<%=@sub_category.id%>)" /> 
- </div>
 
-<div class="listheading"><div class="fontstyling"></div>
+
+
+<div class="fontstyling">
 <h2>Listing events for the Category :<%="#{@sub_category_name}"%></h2>
+</div>
+<div id="listevents">
+<div class="searchbox">
+    <%= label_tag :'Search'%>
+    <%= text_field_tag :search %>
+
+   <input type="button" name="Go"  class="button" value="Go" onclick="search(<%=@sub_category.id%>)" /> 
+ </div>
+ <div class="fontstyling">
 </div>
 <% if @events.empty? %>
 <div class="noevents"><h5>No events for this category</h5></div>
 <% else%>
-<table class="tablesorter" id="my_table">
+<table class="searchtable" id="my_table">
  <thead>
   <tr>
     <th>Event</th>
-    <th>Description</th>
+   
     <th>Event date</th>
     
-    <th>Event Category  <th></th>
-    <th></th></th>
+    <th>Event Category </th> <th>Edit</th>
+    <th>Delete</th>
    
    
   </tr>
@@ -33,9 +36,6 @@
 <% @events.each do |event| %>
   <tr>
    <td><%= link_to "#{event.name}", event %></td>
-
-    <td><%= event.description %></td>
-    
       <td><%= event.event_date %></td>
     <%  @sub_category = SubCategory.find(event.sub_category_id)%>
      <td><%= @sub_category.name %></td>

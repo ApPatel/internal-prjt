@@ -1,39 +1,34 @@
 <p id="notice"><%= notice %></p>
-<div class="wrapper">
-<p>
-  <b>Event name:</b>
-  <%= @event.name %>
-</p>
+<div class="scalfoldloginform">
+<table><tr><td  class="labelstyle">Event name:</td>
+  <td><%= @event.name %></td></tr>
 
-<p>
-  <b>Event Agenda:</b>
-  <%= @event.agenda %>
-</p>
 
-<p>
-  <b>Event Description:</b>
-  <%= @event.description %>
-</p>
+
+ <tr><td class="labelstyle">Event Agenda:</td>
+  <td><%= @event.agenda %></td></tr>
+
+
+<tr><td class="labelstyle">Event Description:</td>
+  <td><%= @event.description %></td></tr>
+
 <% if @event.attachment_file%>
-<p>
-  <b>Attachment file:</b>
 
+  <tr><td class="labelstyle">Attachment file:</td>
+<td>
 
-  <%= link_to "#{@event.attachment_file}",download_file_event_path(@event) %>
-</p>
+  <%= link_to "#{@event.attachment_file}",download_file_event_path(@event) %></td></tr>
+
 <% end%>
 
-<p>
-  <b>Sub category:</b>
+
+<tr><td class="labelstyle">Sub category:</td>
   <% event=@event.sub_category_id %>
    <%  @sub_category = SubCategory.find(event)%>
-     <td><%= @sub_category.name %></td>
-</p>
+  <td><%= @sub_category.name %></td></tr>
+<tr><td class="labelstyle">Event Date:</td>
+  <td><%= @event.event_date %></td></tr></table>
 
-<p>
-  <b>Event Date:</b>
-  <%= @event.event_date %>
-</p>
 </div>
 <div class="editlinkinview">
  <%= link_to(image_tag("editIcon.png",:height=>20,:width=>20), edit_event_path(@event)) %>

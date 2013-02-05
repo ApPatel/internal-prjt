@@ -1,14 +1,19 @@
-<div class="wrapper">
-<h2>Forgot your password?</h2>
+<div id="login" class="loginform">
+  <div class="signinname">Forgot your password</div>
+</div>
+  <div class="loginform1">
 
+<table>
 <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
   <%= devise_error_messages! %>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
+  <tr><td class="labelstyle"><%= f.label :email %></td>
+  <td><%= f.email_field :email,:size=>25 %></td></tr>
 
-  <div><%= f.submit "Send me reset password instructions" %></div>
+ <tr><td></td><td> <%= f.submit "Reset password" ,:class=>"button" %></td><tr><table>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<font class="signup">Have an account <%= link_to "Sign in", new_session_path(resource_name) ,:class=>"labelstyle"%> now </font><br />
+<font class="signup">Dont have an account <%= link_to "Sign up", new_registration_path(resource_name) ,:class=>"labelstyle"%> now </font>
+
 </div>

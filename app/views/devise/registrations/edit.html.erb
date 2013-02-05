@@ -1,42 +1,43 @@
-<div class="listheading"><div class="fontstyling"><h2>Edit User</h2></div></div>
-<div class="wrapper">
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
-
+<div  class="formheading">
+<h2>Edit User</h2></div>
+<div class="scalfoldloginform">
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
   <%= devise_error_messages! %>
 
- <table><tr><td> <%= f.label :email %></td>
-  <td><%= f.email_field :email %></td></tr>
+ <table><tr><td class="labelstyle"> <%= f.label :email %></td>
+  <td><%= f.email_field :email  ,:size=>20%></td></tr>
 
-<tr><td><%= f.label :password %> <i>(leave blank if you don't want to change it)</i></td>
-  <td><%= f.password_field :password, :autocomplete => "off" %></td></tr>
+<tr><td class="labelstyle"><%= f.label :password %> </td>
+  <td><%= f.password_field :password, :size=>20, :autocomplete => "off" %></td></tr>
 
-  <tr><td><%= f.label :password_confirmation %></td>
-  <td><%= f.password_field :password_confirmation %></td></tr>
+  <tr><td class="labelstyle"><%= f.label :password_confirmation %></td>
+  <td><%= f.password_field :password_confirmation ,:size=>20 %></td></tr>
 
-<tr><td><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i></td>
-  <td><%= f.password_field :current_password %></td></tr>
+<tr><td class="labelstyle"><%= f.label :current_password %> </td>
+  <td><%= f.password_field :current_password  ,:size=>20%></td></tr>
 
- <% if current_user.image_url %>
- <tr><td><div id="pic"><%=image_tag current_user.image_url.to_s ,:width=>'50' , :height=>'70', :class=>"style_image"%><br />
-<a id="change_pic">Change picture</a><br />
-<a id="delete_pic">Remove picture</a></div></td></tr>
- 
- <% else %>
-  <tr><td><%= f.label :'Profile picture'%></td>
-    <td><%= f.file_field :image %></td></tr>
-<% end%>
- <tr><td><div id="new_pic" style="display:none;">
+ <tr><td class="labelstyle"><div id="new_pic" style="display:none;">
   <%= f.label :'Profile picture'%>
- <%= f.file_field :image %>
+ <%= f.file_field :image ,:size=>20 %>
   </div></td></tr>
-  </table>
-  <div><%= f.submit "Update" %></div>
+    </table>
+   
+<% if current_user.image_url %>
+<div id="pic"><%=image_tag current_user.image_url.to_s ,:width=>'50' , :height=>'70', :class=>"style_image"%><br />
+ 
+<a class="change_pic" id="change_pic">Change picture</a><br />
+<a class="delete_pic" id="delete_pic">Remove picture</a></div>
+ 
+ <% else %><table><tr><td class="labelstyle">
+ <%= f.label :'Profile picture'%></td>
+  <td><%= f.file_field :image ,:size=>20 %></td></tr></table> 
+<% end%>
+ <%= f.submit "Update",:class=>"editbutton" %>
+
 <% end %>
 
-<h3>Cancel my account</h3>
 
-<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %>.</p>
+<div class="formheading"><p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %>.</p></div>
 
 </div>
 <script type="text/javascript">

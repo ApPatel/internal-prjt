@@ -2,7 +2,7 @@
 
 <html>
 
-       <p class="alert"><%= alert %></p>
+      
 <div class="heading">
   <div class="header">
 	<p><font class="appname" >ODC EVENT MANAGEMENT</font></p>
@@ -11,6 +11,7 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
 
   <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "jquery.movingboxes" %>
 
   <%= csrf_meta_tags %>
 </head>
@@ -18,11 +19,13 @@
 
 <div id="user_nav">
   <% if user_signed_in? %>
-    Signed in as <%= current_user.email %>
+   
      <%if current_user.role? :Administrator%>
-     | Administrator |
+     <font class="signinmessage"> Signed in as Administartor
+      <% else %>
+      <font class="signinmessage"> Signed in as <%= current_user.email %>
      <% end %>
-    <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+    <%= link_to "Sign out", destroy_user_session_path, :method => :delete %></font>
 
  
   <% end %>
@@ -30,9 +33,9 @@
 <div class="avatar">
   <% if user_signed_in? %>
    <% if current_user.image_url %>
-      <%=image_tag current_user.image_url.to_s ,:width=>'50' , :height=>'60',:class => "style_image"%>
+      <%=image_tag current_user.image_url.to_s ,:width=>'50' , :height=>'60',:class => "style_image_view"%>
       <% else %>
-       <%=image_tag "avatar.png",:width=>'50', :height=>'60', :class=>"style_image"%>
+       <%=image_tag "avatar.png",:width=>'50', :height=>'60', :class=>"style_image_view"%>
       <% end %>
       <% end%>
     </div>
@@ -40,15 +43,13 @@
 
 <%= yield %>
 
- 
-
 <% if user_signed_in? %>
 <div class="wrapper1">
 <div id="accordion">
   <% user=current_user%>
  <% if user.role? :Administrator%>
  <h3>Manage Users</h3>
- <div>
+ <div style="height:95px;">
   <p>
     <%= link_to "view Users" , users_path%><br />
  <%= link_to "New User" ,new_user_path%>
