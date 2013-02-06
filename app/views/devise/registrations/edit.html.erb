@@ -42,7 +42,8 @@
 </div>
 <script type="text/javascript">
  $('#delete_pic').click(function(){
- 
+  if(confirm("Are you sure?"))
+  {
 var userId="<%=current_user.id%>";
 
       $.ajax({
@@ -58,7 +59,7 @@ var userId="<%=current_user.id%>";
     type: "get"
   
   });
-
+}
  });
 
  $('#change_pic').click(function(){
