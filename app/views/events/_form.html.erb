@@ -60,7 +60,7 @@
 
  <td><%=  f.select :sub_category_id, options_for_select(@sub_categories.collect {|sub_category| [sub_category.name , sub_category.id]},@event.sub_category_id), {:include_blank => 'Please Select'}%></td></tr>
   </div>
-   <tr><td><%= link_to "Create New Category for this Event", events_other_sub_category_path ,:id => 'subNewCat'%>
+   <tr><td><%= link_to "Create New Category", events_other_sub_category_path ,:id => 'subNewCat'%>
    <td><div id="other"></div></td></tr>
 
 

@@ -32,7 +32,7 @@
  }
  .avatar
  {
-    margin-left: 803px;
+    margin-left: 820px;
    margin-top: -46px;
  }
  
@@ -446,6 +446,7 @@ text-align: right
 margin-left: -470px;
 margin-right: 457px;
 margin-top: 178px;
+padding-top: 42px;
 
    }
 ul.pagination
