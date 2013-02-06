@@ -442,10 +442,10 @@ text-align: right
 
 .pagination
 {
-	  float: left;
-  margin-left: -338px;
-  
-    padding-top: 218px;
+	  float: right;
+    margin-left: -412px;
+    margin-right: 426px;
+    margin-top: 178px;
 
    }
 ul.pagination
