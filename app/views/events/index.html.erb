@@ -3,7 +3,7 @@
 <h1>Events List</h1>
   </div>
 <% if @events.empty? %>
-<div class="noevents"><h5>No events</h5></div>
+<div class="fontstyling"><h5>No events</h5></div>
 <% else%>
 <div class="tableborder">
 <table class="tablesorter" id="my_table">
@@ -23,7 +23,7 @@
 
 <% @events.each do |event| %>
   <tr>
-   <td><%= link_to "#{event.name}", event %></td>
+   <td><%= link_to "#{event.name}", event,:class=>"linkclass"  %></td>
 
     
       <td><%= event.event_date %></td>

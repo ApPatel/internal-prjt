@@ -21,11 +21,11 @@
   <% if user_signed_in? %>
    
      <%if current_user.role? :Administrator%>
-     <font class="signinmessage"> Signed in as Administartor
+     <font class="signinmessage"> Signed in as Administartor |
       <% else %>
-      <font class="signinmessage"> Signed in as <%= current_user.email %>
+      <font class="signinmessage"> Signed in as <%= current_user.email %> |
      <% end %>
-    <%= link_to "Sign out", destroy_user_session_path, :method => :delete %></font>
+    <%= link_to "Sign out", destroy_user_session_path,:class=>"links", :method => :delete %></font>
 
  
   <% end %>

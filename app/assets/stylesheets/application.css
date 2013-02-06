@@ -123,7 +123,8 @@
     margin-right: 300px;
     margin-top: -35px;
     padding-top: 35px;
-    width: 50%
+    width: 50%;
+     padding-bottom: 10px;
  }
 .header
 {
@@ -293,8 +294,8 @@ text-align: right
     border-width: 1px;
     float: left;
    margin-left: 150px;
+   border-style: solid;
    
-    padding-top: 35px;
     width: 50%;
 }
 .searchtable
@@ -304,7 +305,7 @@ text-align: right
     float: left;
    margin-left: 150px;
    
-    padding-top: 35px;
+   border-style: solid;
     width: 50%
 }
 
@@ -445,6 +446,7 @@ text-align: right
   margin-left: -338px;
   
     padding-top: 218px;
+
    }
 ul.pagination
 {
@@ -455,6 +457,15 @@ margin-bottom: 2px;
     float: right;
     list-style: disc outside none;
 
+
+}
+.links
+{
+    color: white;
+}
+.linkclass
+{
+    color: #244387;
 }
 ul.pagination li
 {
@@ -468,10 +479,13 @@ ul.pagination li
     margin-right: 4px;
     padding: 4px;
     border-radius: 3px 3px 3px 3px;
+     border-width: 1px;
+    border-color: #244387;
+    border-style: solid;
 }
 li.active
 {
-	background: none repeat scroll 0 0 #D3E2FF;
+	background:url("tableHead_bg.jpg")
 }
 
 .wrapper1

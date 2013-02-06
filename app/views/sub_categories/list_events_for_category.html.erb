@@ -16,7 +16,7 @@
  <div class="fontstyling">
 </div>
 <% if @events.empty? %>
-<div class="noevents"><h5>No events for this category</h5></div>
+<div class="fontstyling"><h5>No events for this category</h5></div>
 <% else%>
 <table class="searchtable" id="my_table">
  <thead>
@@ -35,7 +35,7 @@
 
 <% @events.each do |event| %>
   <tr>
-   <td><%= link_to "#{event.name}", event %></td>
+   <td><%= link_to "#{event.name}", event,:class=>"linkclass"  %></td>
       <td><%= event.event_date %></td>
     <%  @sub_category = SubCategory.find(event.sub_category_id)%>
      <td><%= @sub_category.name %></td>

@@ -9,7 +9,7 @@
 <div class="noticestyling">
 <h3>You searched with keyword :"<%="#{params[:search]}"%>"</h3></div>
 <% if @events.empty? %>
-<div class="noevents"><h6>No events matching the keyword</h6></div>
+<div class="fontstyling"><h6>No events matching the keyword</h6></div>
 <% else%>
 <table class="searchtable" id="my_table">
  <thead>
@@ -27,7 +27,7 @@
 
 <% @events.each do |event| %>
   <tr>
-   <td><%= link_to "#{event.name}", event %></td>
+   <td><%= link_to "#{event.name}", event,:class=>"linkclass"  %></td>
 
     
       <td><%= event.event_date %></td>
