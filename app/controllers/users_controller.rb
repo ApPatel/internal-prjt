@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   # GET /users.xml
  
   def index
-    @users = User.order("id asc").page( params[:page]).per(5)
+    @users = User.order("id asc").page( params[:page]).per(2)
 
     respond_to do |format|
       format.html # index.html.erb
