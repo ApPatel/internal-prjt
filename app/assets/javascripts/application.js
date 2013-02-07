@@ -15,5 +15,5 @@
 //= require_tree .
 //= require jquery.tablesorter
 //= require ddaccordion
-//= require jquery-ui
+
 
