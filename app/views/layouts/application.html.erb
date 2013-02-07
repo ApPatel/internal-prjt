@@ -10,9 +10,8 @@
   <title>SecondApp</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
 
-  <%= javascript_include_tag "application" %>
-   
-    <%= javascript_include_tag "jquery-ui" %>
+  <%= javascript_include_tag "application","jquery-ui" %>
+
   
 
   <%= csrf_meta_tags %>
@@ -84,7 +83,7 @@
   <h3>Manage Category</h3>
   <div>
     <p>
-       <%= link_to "View Categories" ,sub_categories_path%></br>
+       <%= link_to "View Categories" ,sub_categories_path%>
     <%= link_to "New Category", new_sub_category_path%>
  
     </p>
@@ -97,6 +96,9 @@
 </body>
 
 </html>
+
+
+ 
   <script>
   $(function() {
     $( "#accordion" ).accordion();
