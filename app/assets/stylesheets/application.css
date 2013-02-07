@@ -273,6 +273,8 @@ form#form input[type=submit]
 .searchtable th
 {
     background-image: url("tableHead_bg.jpg");
+    height: 28px;
+    padding-top: 3px;
     
 }
 #Editprofile
@@ -377,12 +379,7 @@ text-align: right
 	
 
 }
-#conatiner_demo
-{
-	border: 2px,2px,2px,2px;
-	border-image-source: texture.jpg;
 
-}
 .wrapper
 {
 	background-color: #D3E2FF;
