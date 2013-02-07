@@ -11,7 +11,7 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
 
   <%= javascript_include_tag "application" %>
-  <%= javascript_include_tag "jquery.movingboxes" %>
+  
 
   <%= csrf_meta_tags %>
 </head>
@@ -51,7 +51,7 @@
  <h3>Manage Users</h3>
  <div style="height:95px;">
   <p>
-    <%= link_to "view Users" , users_path%><br />
+    <%= link_to "View Users" , users_path%><br />
  <%= link_to "New User" ,new_user_path%>
   </p>
 </div>
@@ -66,7 +66,7 @@
   <h3>Manage Profile</h3>
   <div>
     <p>
-    <%= link_to "Edit profile" , edit_user_registration_path%><br />
+    <%= link_to "Edit Profile" , edit_user_registration_path%><br />
 
   
     </p>
@@ -74,15 +74,17 @@
   <h3>Manage Events</h3>
   <div>
     <p>
-    <%= link_to "Create Event" , new_event_path%><br />
-    <%= link_to "List Event" ,events_path%>
+       <%= link_to "View Events" ,events_path%>
+    <%= link_to "New Event" , new_event_path%><br />
+   
     </p>
   </div>
   <h3>Manage Category</h3>
   <div>
     <p>
-    <%= link_to "Create Category", new_sub_category_path%></br>
-  <%= link_to "List Category" ,sub_categories_path%>
+       <%= link_to "View Categories" ,sub_categories_path%>
+    <%= link_to "New Category", new_sub_category_path%></br>
+ 
     </p>
     
   </div>
@@ -96,7 +98,7 @@
 
 
 
-  <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+
   <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
  
   <script>
