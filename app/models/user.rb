@@ -7,7 +7,10 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me,:role_ids,:name, :image
+    validates :email, :presence => true
   mount_uploader :image, ImageUploader
+
+
  
    has_and_belongs_to_many :roles
     def role?(role)

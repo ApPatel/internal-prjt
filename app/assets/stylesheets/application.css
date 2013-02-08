@@ -126,6 +126,10 @@
     width: 50%;
      padding-bottom: 10px;
  }
+ #error_explanation
+ {
+    color: red;
+ }
 .header
 {
 	 background: url("headerBg.jpg") repeat scroll 0 0 transparent;
@@ -444,9 +448,10 @@ text-align: right
 {
 	 float: right;
 margin-left: -470px;
-margin-right: 457px;
-margin-top: 178px;
-padding-top: 42px;
+
+margin-right: 424px;
+    margin-top: 178px;
+    padding-top: 2px;
 
    }
 ul.pagination
