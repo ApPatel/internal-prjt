@@ -9,8 +9,8 @@
     <head>
   <title>SecondApp</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-
-  <%= javascript_include_tag "application","jquery.tablesorter","jquery-ui" %>
+<%= stylesheet_link_tag    "flexslider" %>
+  <%= javascript_include_tag "application","jquery.tablesorter","jquery-ui","jquery.flexslider" %>
 
   
 
@@ -92,9 +92,10 @@
   
 </div>
 </div>
+</div>
+
 <% end %>
 </body>
-
 </html>
 
 
@@ -104,3 +105,34 @@
     $( "#accordion" ).accordion();
   });
   </script>
+  <html>
+  <%@events=Event.all %>
+  <% if user_signed_in? %>
+<div class="sliderimage">
+ <div class="flexslider">
+      <ul class="slides">
+       <% @events.each do |event| %>
+       <% if event.event_date.nil? %>
+       <%else%>
+       <% if event.event_date > Date.today%>
+       <li class="eventname">Event: <%=event.name%><br />
+        On:<%=event.event_date%></li>
+       <% end%>
+       <%end%>
+       <%end%>
+    </ul> 
+  </div>  
+</div>
+<% end%>
+</html>
+<script type="text/javascript">
+$(function() {
+
+    $(".flexslider").flexslider({ 
+     animation: "slide"
+       }); 
+
+});
+</script>
+
+
