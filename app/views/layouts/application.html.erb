@@ -109,14 +109,18 @@
   <%@events=Event.all %>
   <% if user_signed_in? %>
 <div class="sliderimage">
+
  <div class="flexslider">
+
       <ul class="slides">
+        
+        
        <% @events.each do |event| %>
        <% if event.event_date.nil? %>
        <%else%>
        <% if event.event_date > Date.today%>
        <li class="eventname">Event: <%=event.name%><br />
-        On:<%=event.event_date%></li>
+        On: <%=event.event_date%></li>
        <% end%>
        <%end%>
        <%end%>

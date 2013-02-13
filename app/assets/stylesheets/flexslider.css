@@ -8,10 +8,19 @@
  *
  * Contributing author: Tyler Smith (@mbmufffin)
  */
-
+.sliderheading
+{
+  height:10px;
+  width: 500px;
+  background: url("navHead_BG.jpg");
+}
  .eventname
  {
- 	padding-right: 25px;
+ padding-right: 33px;
+padding-left: 0px;
+font-size: 20px;
+color: #244387;
+font-family: Arial;
  }
 /* Browser Resets */
 .flex-container a:active,

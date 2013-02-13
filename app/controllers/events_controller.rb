@@ -73,7 +73,7 @@ class EventsController < ApplicationController
       end
     end
     
-        format.html { redirect_to @event, notice: 'Event was successfully created.' }
+        format.html { redirect_to events_url, notice: 'Event was successfully created.' }
         format.json { render json: @event, status: :created, location: @event }
       else
         format.html { render action: "new" }

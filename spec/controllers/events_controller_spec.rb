@@ -14,8 +14,8 @@ describe "#new event" do
     it "takes six parameter and returns a Event object" do
     	 get "new"
         @events=Event.new(:name=>'event1',:agenda=>'eevnt1',:description=>'event1',:sub_category_id=>1,:attachment_file=>'abc.txt',:event_date=>'2013-01-15')
-       @events.should be_an_instance_of Event
-       response.should render_template('new')
+        @events.should be_an_instance_of Event
+        response.should render_template('new')
     end
 end
 describe "#show event" do
