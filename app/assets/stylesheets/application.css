@@ -52,13 +52,18 @@
    
     width: 88px;
  }
+ #notice
+ {
+      color: green;
+    margin-left: 153px
+ }
  .picmodify
  {
     margin-right: 50px;
  }
  .sliderimage
  {
-    padding-top: 330px;
+    padding-top: 370px;
  }
 .fontstyling
  {

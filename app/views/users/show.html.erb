@@ -1,11 +1,9 @@
 <p id="notice"><%= notice %></p>
-<div class="wrapper">
-<p>
-  <b>Email:</b>
-  <%= @user.email %>
-</p>
+<div class="scalfoldloginform">
+  <table><tr><td  class="labelstyle">Email:</td>
+  <td><%= @user.email %></td></tr></table>
+
 </div>
 
 
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
